@@ -2328,7 +2328,7 @@ main .projects-container .project-tags {
 }
 main .projects-container .project-tags button {
   background-color: white;
-  font-size: 1.325rem;
+  font-size: 20rem;
   border: 1px solid rgba(0, 0, 0, 0.5);
   padding: 8px 30px;
   text-align: center;
@@ -2340,7 +2340,7 @@ main .projects-container .project-tags button {
 }
 @media all and (max-width: 1600px) {
   main .projects-container .project-tags button {
-    font-size: 1.15rem;
+    font-size: 14px;
     padding: 8px 25px;
   }
 }
