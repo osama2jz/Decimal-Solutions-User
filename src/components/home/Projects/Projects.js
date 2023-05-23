@@ -130,6 +130,7 @@ function Services() {
                   We are offering a huge variety of services from web
                   development to web hosting.
                 </p>
+                
                 <a href="#" class="link__icon">
                   <LinkIcon />
                 </a>
