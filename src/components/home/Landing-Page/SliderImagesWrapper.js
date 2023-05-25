@@ -1,6 +1,21 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+,
+.achievements-title {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+,
+.title {
+  font-size: 1.6rem;
+}
 .img-slider-header {
     position: relative;
     width: 100%;

@@ -117,6 +117,12 @@ function Services() {
           marginRight: "3rem",
         }}
       >
+        <div class="heading">
+            <div class="services-title">
+              <span class="ser-title"> &lt;&nbsp;Our Serives&nbsp;&gt; </span>
+              <h2 className="font-bold text-xl">View some of our services</h2>
+            </div>
+          </div>
         <Slider {...settings}>
           <div style={{ marginRight: "3rem" }}>
             <div class="carousel__slide">
@@ -152,12 +158,12 @@ function Services() {
                   <div class="card__image">
                   <AppIcon className="img" />
                   </div>
-                  <h3>Mobile Application Development</h3>
+                  <h3 className="text-center mt-2">Mobile App Development</h3>
                 </div>
                 <div class="hover__overlay">
                   <p>
-                    We are offering a huge variety of services from web
-                    development to web hosting.
+                    We are offering a huge variety of services from Mobile app 
+                    development to application hosting.
                   </p>
                   <a href="#" class="link__icon">
                   <LinkIcon className="img" />
@@ -179,8 +185,8 @@ function Services() {
                 </div>
                 <div class="hover__overlay">
                   <p>
-                    We are offering a huge variety of services from web
-                    development to web hosting.
+                    We are offering a huge variety of services of website designings, 
+                    App designing and game designing.
                   </p>
                   <a href="#" class="link__icon">
                   <LinkIcon className="img" />
@@ -201,8 +207,8 @@ function Services() {
                 </div>
                 <div class="hover__overlay">
                   <p>
-                    We are offering a huge variety of services from web
-                    development to web hosting.
+                  Digital marketing empowers our diverse range of services in website
+                   design, app development, and game design to effectively reach and engage with a wider audience.
                   </p>
                   <a href="#" class="link__icon">
                   <LinkIcon className="img" />
@@ -223,8 +229,8 @@ function Services() {
                 </div>
                 <div class="hover__overlay">
                   <p>
-                    We are offering a huge variety of services from web
-                    development to web hosting.
+                  Unlock your business's full potential with our
+                   comprehensive ERP and business solutions.
                   </p>
                   <a href="#" class="link__icon">
                   <LinkIcon className="img" />
@@ -245,8 +251,8 @@ function Services() {
                 </div>
                 <div class="hover__overlay">
                   <p>
-                    We are offering a huge variety of services from web
-                    development to web hosting.
+                  Immerse yourself in a world of extraordinary experiences with 
+                  our cutting-edge AR/VR games services, where reality and imagination collide.
                   </p>
                   <a href="#" class="link__icon">
                   <LinkIcon className="img" />

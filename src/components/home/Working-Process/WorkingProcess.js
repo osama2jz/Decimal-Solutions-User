@@ -10,8 +10,8 @@ function WorkingProcess() {
         <div class="heading">
           <div class="working-desc">
             <span class="title"> &lt;&nbsp;Why Choose Us&nbsp;&gt; </span>
-            <h2 style={{fontSize: 'x-large'}}>Our Working process</h2>
-            <p class="description">
+            <h2 style={{fontSize: 'x-large'}} className="font-bold">Our Working process</h2>
+            <p class="description" className="text-base mt-2">
               We ensure that all your digital needs are met at an affordable
               price and in promised time.
             </p>

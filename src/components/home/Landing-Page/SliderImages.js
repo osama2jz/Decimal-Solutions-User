@@ -79,8 +79,9 @@ function SliderImages() {
                 </div>
                 <div class="text">
                   <h1>
-                    Best ERP Solutions <br />
-                    For Online Business
+                    Web Application <br />
+                    Development By <br/>
+                    Professionals
                   </h1>
                   <div class="button__container">
                     <a href="#">

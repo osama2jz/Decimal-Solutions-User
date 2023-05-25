@@ -23,7 +23,7 @@ function Header() {
           <div class="phone">
             <span>
               <PhoneIcon />
-              +92 345 5893337, &nbsp;+92 300 4257414
+              +92 345 5893337
             </span>
             <span>
               <EmailIcon style={{ marginRight: "0.4rem" }} />
@@ -35,13 +35,13 @@ function Header() {
 
           <div class="socials">
             <div class="social-media-platforms">
-              <a href="#">
+              <a href="https://www.facebook.com/">
                 <FacebookIcon className="img" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/">
                 <InstagramIcon className="img" />
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/">
                 <LinkedInIcon className="img" />
               </a>
             </div>
@@ -75,7 +75,7 @@ function Header() {
                 <Link to="/portfolio">Portfolio</Link>
               </li>
               <li class="item">
-                <Link to="/projects">Our Products</Link>
+                <Link to="/products">Our Products</Link>
               </li>
               <li class="item">
                 <Link to="/career">Careers</Link>

@@ -31,7 +31,7 @@ a {
 
 header .contact-details {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  height: 70px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   /* padding: 0 7rem; */
@@ -238,8 +238,8 @@ header nav .logo a {
   place-items: center;
 }
 header nav .logo a .img {
-  width: 200px;
-  height: auto;
+  width: 120px;
+  height:80px;
 }
 @media all and (max-width: 1350px) {
   header nav .logo a .img {
@@ -2323,7 +2323,7 @@ main .projects-container .project-tags {
 }
 @media screen and (max-width: 1000px) {
   main .projects-container .project-tags {
-    gap: 1rem;
+    gap: 0rem;
   }
 }
 main .projects-container .project-tags button {
@@ -2340,7 +2340,7 @@ main .projects-container .project-tags button {
 }
 @media all and (max-width: 1600px) {
   main .projects-container .project-tags button {
-    font-size: 14px;
+    font-size: 12px;
     padding: 8px 25px;
   }
 }
@@ -2489,7 +2489,7 @@ main .working-process .heading .working-desc h2 {
   }
 }
 main .working-process .heading .working-desc p.description {
-  font-size: 1.7rem;
+  font-size: 1rem;
   color: #666666;
 }
 @media all and (max-width: 1360px) {
@@ -3523,4 +3523,21 @@ footer .content .footer-div .footer-div-3 .last-line {
 footer .content .footer-div .footer-div-3 .last-line .bold {
   text-transform: uppercase;
   font-weight: 500;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-title {
+  display: flex;
+  flex-direction: column;
+  /* color: white; */
+}
+
+.ser-title {
+  font-size: 1.6rem;
+  color: #a4238c;
+
 }
