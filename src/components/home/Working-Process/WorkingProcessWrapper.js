@@ -42,8 +42,9 @@ h2{
   .description-container {
     background-color: white;
     position: absolute;
-    padding: 30px;
+    padding: 18px;
     border-radius: 15px;
+    border: 1px solid rgb(0,0,0,0.2);
     box-shadow: 15px 12px 20px rgba(0, 0, 0, 0.06);
     width: 40%;
     font-size: 1em;
@@ -74,7 +75,7 @@ h2{
   .description-4 {
     /* bottom: 0%; */
     right: 6.5%;
-    top: 74.7%
+    top: 77.7%
   }
   @media screen and (max-width: 1200px) {
      .img-container {

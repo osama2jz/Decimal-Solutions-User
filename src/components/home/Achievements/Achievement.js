@@ -28,16 +28,15 @@ function Achievement() {
               <div>
                 <GroupIcon />
               </div>
-              <h1>08</h1>
+                {count && <CountUp start={0} end={8} duration={3} style={{fontSize:'50px'}}/>}
               <span>Years of operation</span>
             </div>
             <div class="c-projects center-achi">
               <div>
                 <PatternIcon />
               </div>
-              {/* <h1>112</h1> */}
               <h1>
-                {count && <CountUp start={0} end={112} duration={3} />}
+                {count && <CountUp start={0} end={112} duration={3} style={{fontSize:'50px'}}/>}
               </h1>
               <span>Completed Projects</span>
             </div>
@@ -45,14 +44,14 @@ function Achievement() {
               <div>
                 <PeopleIcon />
               </div>
-              <h1>57</h1>
+                {count && <CountUp start={0} end={57} duration={3} style={{fontSize:'50px'}}/>}
               <span>Loyal Clients</span>
             </div>
             <div class="projects center-achi">
               <div>
                 <LaptopIcon />
               </div>
-              <h1>07</h1>
+                {count && <CountUp start={0} end={7} duration={3} style={{fontSize:'50px'}} />}
               <span>New Projects</span>
             </div>
           </div>

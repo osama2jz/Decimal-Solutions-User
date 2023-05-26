@@ -7,7 +7,10 @@ import react from "../../../assets/images/Tools-and-Tech/react.png";
 import node from "../../../assets/images/Tools-and-Tech/node.png";
 import vue from "../../../assets/images/Tools-and-Tech/vue.png";
 import angular from "../../../assets/images/Tools-and-Tech/angular.png";
-import aspnet from "../../../assets/images/Tools-and-Tech/aspnet.png";
+import graphql from "../../../assets/images/Tools-and-Tech/graphql.png";
+import reactNative from "../../../assets/images/Tools-and-Tech/reactNative.png";
+import unity from "../../../assets/images/Tools-and-Tech/unity.png";
+import nextjs from "../../../assets/images/Tools-and-Tech/nextjs.webp";
 import sql from "../../../assets/images/Tools-and-Tech/microsoftsql.png";
 import python from "../../../assets/images/Tools-and-Tech/python.png";
 import django from "../../../assets/images/Tools-and-Tech/djnago.png";
@@ -96,10 +99,9 @@ function Technology() {
             <span class="title">&lt;&nbsp;Tools & Technologies&nbsp;&gt;</span>
 
             <h2 className="font-bold">Working Technologies</h2>
-            <p class="description" >
+            <p class="description">
               We ensure that you'll embark on a perfectly planned, safe vacation
-              at a
-              price you can afford.
+              at a price you can afford.
             </p>
           </div>
         </div>
@@ -115,66 +117,83 @@ function Technology() {
           // alignItems: 'center'
         }}
       >
-        <Slider {...settings}  >
-          <div class="entry" style={{ background: 'pink' }} >
+        <Slider {...settings}>
+          <div class="entry" style={{ background: "pink" }}>
             <img
               src={mongo}
               alt="MongoDB Logo"
               style={{ width: "20rem", marginRight: "4rem" }}
             />
           </div>
-          <div class="entry" style={{ border: '1px solid black' }}>
+          <div class="entry" style={{ border: "1px solid black" }}>
             <img
               src={express}
               alt="Express.js Logo"
               style={{ width: "20rem", marginRight: "2rem" }}
             />
           </div>
-          <div class="entry" style={{ border: '1px solid black' }}>
+          <div class="entry" style={{ border: "1px solid black" }}>
             <img src={react} alt="React.js Logo" style={{ width: "20rem" }} />
+          </div>
+          <div class="entry" style={{ border: "1px solid black" }}>
+            <img src={reactNative} alt="React.js Logo" style={{ width: "20rem" }} />
           </div>
           <div class="entry">
             <img src={node} alt="Node.js Logo" style={{ width: "20rem" }} />
           </div>
-          <div class="entry" style={{ border: '1px solid black' }}>
+          <div class="entry" style={{ border: "1px solid black" }}>
             <img
               src={vue}
               alt="Vue.js Logo"
               style={{ width: "20rem", marginRight: "4rem" }}
             />
           </div>
-          <div class="entry" style={{ border: '1px solid black' }}>
+          <div class="entry" style={{ border: "1px solid black" }}>
             <img
               src={angular}
               alt="Angular Logo"
               style={{ width: "20rem", marginRight: "4rem" }}
             />
           </div>
-          <div class="entry asp-net" style={{ border: '1px solid black' }}>
-            <img src={aspnet} alt=".ASP NET Logo" style={{ width: "20rem" }} />
+          <div class="entry asp-net" style={{ border: "1px solid black" }}>
+            <img src={graphql} alt=".ASP NET Logo" style={{ width: "20rem" }} />
           </div>
-          <div class="entry" style={{ border: '1px solid black' }}>
+          <div class="entry" style={{ border: "1px solid black" }}>
             <img
               src={sql}
               alt="Microsoft SQL Server Logo"
               style={{ width: "20rem" }}
             />
           </div>
-          <div class="entry" style={{ border: '1px solid black' }}>
+          <div class="entry" style={{ border: "1px solid black" }}>
             <img
               src={python}
               alt="Python Logo"
               style={{ width: "20rem", marginRight: "3rem" }}
             />
           </div>
-          <div class="entry" style={{ border: '1px solid black' }}>
+          <div class="entry" style={{ border: "1px solid black" }}>
             <img
               src={django}
               alt="Django Logo"
               style={{ width: "20rem", marginRight: "3rem" }}
             />
           </div>
-          <div class="entry" style={{ border: '1px solid black' }}>
+          <div class="entry" style={{ border: "1px solid black" }}>
+            <img
+              src={unity}
+              alt="Django Logo"
+              style={{ width: "20rem", marginRight: "3rem" }}
+            />
+          </div>
+          <div class="entry" style={{ border: "1px solid black" }}>
+            <img
+              src={nextjs}
+              alt="Django Logo"
+              style={{ width: "20rem", marginRight: "3rem" }}
+            />
+          </div>
+          <div class="entry" style={{ border: "1px solid black" }}>
             <img src={java} alt="Java Logo" style={{ width: "20rem" }} />
           </div>
           <div class="entry">
