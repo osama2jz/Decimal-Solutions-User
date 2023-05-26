@@ -2318,7 +2318,7 @@ main .projects-container .project-tags {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1000px) {
@@ -2328,7 +2328,7 @@ main .projects-container .project-tags {
 }
 main .projects-container .project-tags button {
   background-color: white;
-  font-size: 20rem;
+  font-size: 12px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   padding: 8px 30px;
   text-align: center;
@@ -2340,7 +2340,7 @@ main .projects-container .project-tags button {
 }
 @media all and (max-width: 1600px) {
   main .projects-container .project-tags button {
-    font-size: 12px;
+    font-size: 1rem;
     padding: 8px 25px;
   }
 }
@@ -3539,5 +3539,24 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
 .ser-title {
   font-size: 1.6rem;
   color: #a4238c;
+}
+
+.portfolio-heading {
+ font-size: small;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-title {
+  display: flex;
+  flex-direction: column;
+  /* color: white; */
+}
+
+.por-title {
+  font-size: 1.4rem;
+  color: #a4238c;
+  margin-bottom: 10px;
 
 }
