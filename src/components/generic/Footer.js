@@ -39,7 +39,7 @@ function Footer() {
             <div class="footer-div-2">
               <h2>Contact Us</h2>
               <span>info@decimalsolutions.com</span>
-              <span>+92 345 5893337, +92 300 4257414</span>
+              <span>+92 345 5893337</span>
               <span>
                 Office No# 17, 2nd Floor, Zaki Centre, I-8 Markaz Islamabad,
                 44000
@@ -47,13 +47,13 @@ function Footer() {
             </div>
             <div class="footer-div-3">
               <div class="socials-footer">
-                <a href="#">
+                <a href="https://www.facebook.com/">
                   <FacebookIcon />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/">
                   <InstagramIcon />
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/">
                   <LinkedInIcon />
                 </a>
               </div>
@@ -61,7 +61,7 @@ function Footer() {
               <div class="last-line">
                 <span>
                   Copyright &copy; <span class="bold">decimal Solution</span>{" "}
-                  All rights reserved 2022
+                  All rights reserved {new Date().getFullYear()}
                 </span>
               </div>
             </div>

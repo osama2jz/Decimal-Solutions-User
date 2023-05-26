@@ -12,6 +12,12 @@ const About = () => {
       <Mission />
       <Identity />
       <Progress />
+      <div class="heading mt-10">
+        <div class="team-titles">
+          <span class="title"> &lt;&nbsp;OUR TEAM&nbsp;&gt; </span>
+          <h2 className="font-bold">We are team of experts</h2>
+        </div>
+      </div>
       <TeamCards />
     </>
   );

@@ -239,7 +239,7 @@ header nav .logo a {
 }
 header nav .logo a .img {
   width: 120px;
-  height:80px;
+  height: 80px;
 }
 @media all and (max-width: 1350px) {
   header nav .logo a .img {
@@ -2268,6 +2268,10 @@ main .projects-container .heading .project-titles .title {
   color: #a4238c;
   font-size: 1.6rem;
 }
+.team-titles .title {
+  color: #a4238c !important;
+  font-size: 1.6rem;
+}
 @media all and (max-width: 1360px) {
   main .projects-container .heading .project-titles .title {
     font-size: 1.4rem;
@@ -3320,7 +3324,7 @@ footer .content {
 }
 footer .content .footer-div {
   color: white;
-  padding-top: 8rem;
+  padding-top: 4rem;
 }
 @media screen and (max-width: 1500px) {
   footer .content .footer-div {
@@ -3540,7 +3544,6 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
   font-size: 1.6rem;
   color: #a4238c;
 }
-
 .portfolio-heading {
  font-size: small;
  display: flex;

@@ -2,9 +2,7 @@ import React from "react";
 import { ChevronLeft, ChevronRight } from "tabler-icons-react";
 
 const Pagination = (props) => {
-  console.log("@@@@", props);
   const pages = new Array(Math.ceil(props.length / 6)).fill(1, 0);
-  console.log("@@@@", pages);
 
   const [chevronColor, setChevronColor] = React.useState("black");
   const [chevronRightColor, setChevronRightColor] = React.useState("black");
@@ -12,7 +10,7 @@ const Pagination = (props) => {
   return (
     <div className="flex text-black justify-center items-center">
       <div
-        className=" m-1 rounded-full border-2 w-16 h-16 flex justify-center items-center hover:bg-[#A4238F] duration-200"
+        className=" m-1 rounded-full border-2 w-12 h-12 flex justify-center items-center hover:bg-[#A4238F] duration-200"
         onMouseEnter={() => {
           setChevronColor("#fff");
         }}
@@ -44,7 +42,7 @@ const Pagination = (props) => {
           //   setChevronColor("black");
           // }}
           key={index}
-          className=" m-1 rounded-full border-2 w-16 h-16 flex justify-center items-center "
+          className=" m-1 rounded-full border-2 w-12 h-12 flex justify-center items-center "
           style={{
             cursor: "pointer",
             backgroundColor: props.page === index ? "#A4238F" : "white",
@@ -61,7 +59,7 @@ const Pagination = (props) => {
         </div>
       ))}
       <div
-        className=" m-1 rounded-full border-2 w-16 h-16 flex justify-center items-center hover:bg-[#A4238F] duration-200 "
+        className=" m-1 rounded-full border-2 w-12 h-12 flex justify-center items-center hover:bg-[#A4238F] duration-200 "
         onClick={() => {
           props.page < pages.length - 1 && props.setPage(props.page + 1);
         }}

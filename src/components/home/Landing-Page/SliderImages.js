@@ -13,7 +13,9 @@ function SliderImages() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
+    autoplaySpeed: 3000,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1
   };

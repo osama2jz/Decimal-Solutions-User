@@ -155,7 +155,7 @@ const AllBlogs = () => {
           OUR BLOG
         </h1>
       </div>
-      <div className="  grid sm:grid-cols-1 cardBreak2:grid-cols-2 cardBreak3:grid-cols-3  justify-around px-28 pt-12">
+      <div className="grid sm:grid-cols-1 cardBreak2:grid-cols-3 cardBreak3:grid-cols-3  justify-around px-28 pt-12">
         {blogs.map((blog, index) => {
           if (index >= page * 6 && index < page * 6 + 6) {
             return (
@@ -169,11 +169,6 @@ const AllBlogs = () => {
             );
           }
         })}
-        {/* <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card /> */}
       </div>
       <div className="p-16">
         <Pagination length={blogs?.length} setPage={setPage} page={page} />
