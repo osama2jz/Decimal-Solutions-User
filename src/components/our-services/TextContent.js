@@ -10,7 +10,7 @@ export default function TextContent({ children, reverse, heading }) {
       >
         {heading}
       </h1>
-      <p className="text-justify sm:text-[16px ] text-[14px] leading-loose text-textColor md:text-[18px] lg:text-[18px] xl:text-[22px] xl:leading-[20px] 2xl:text-[20px] 2xl:leading-[40px] ">
+      <p className="text-justify sm:text-[16px ] text-[14px] leading-[30px] text-textColor md:text-[18px] lg:text-[18px] xl:text-[22px] 2xl:text-[20px]">
         {children}
       </p>
     </div>
