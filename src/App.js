@@ -13,6 +13,7 @@ import Career from "./pages/Career";
 import ContactUs from "./pages/ContactUs";
 import Projects from "./pages/Projects";
 import Products from "./pages/Product";
+import { Viewjob } from "./pages/Viewjob";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/blogs/:id" element={<SpecificBlog />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/view-job/:id" element={<Viewjob />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/portfolio" element={<Projects />} />

@@ -3545,8 +3545,8 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
   color: #a4238c;
 }
 .portfolio-heading {
- font-size: small;
- display: flex;
+  font-size: small;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -3561,17 +3561,27 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
   font-size: 1.4rem;
   color: #a4238c;
   margin-bottom: 10px;
-
 }
 
-.hiring-process-container{
+.hiring-process-container {
   padding: 30px;
-  background-color: #e9e3e3;
-  /* background-color: #a4238c; */
-  height: 600px;
+  background-color: #f4f4f3;
+  padding-block: 50px;
+}
+@media all and (max-width: 800px) {
+  .Hiring-Process-div {
+    flex-wrap: wrap;
+  }
+  .hiring-process-image {
+    width: 170px !important;
+    height: 150px !important;
+  }
+  .hiring-process-image:last-of-type {
+    transform: rotate(90deg);
+  }
 }
 
-.Hiring-Process-div{
+.Hiring-Process-div {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -3579,49 +3589,59 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
   gap: 20px;
 }
 
-
 .hiring-heading {
   font-size: small;
-  
- }
- 
- .hiring-title {
-   display: flex;
-   flex-direction: column;
-   /* color: white; */
- }
- 
- .hir-title {
-   font-size: 1.7rem;
-   color: #a4238c;
-   margin-bottom: 10px;
- 
- }
+}
 
- .hiring-process-image{
-    width: 270px;
-    /* height: fit-content; */
-    /* height: 100%; */
- }
+.hiring-title {
+  display: flex;
+  flex-direction: column;
+  /* color: white; */
+}
 
- .career-Filters{
+.hir-title {
+  font-size: 1.7rem;
+  color: #a4238c;
+  margin-bottom: 10px;
+}
+
+.hiring-process-image {
+  width: 270px;
+  /* height: fit-content; */
+  /* height: 100%; */
+}
+.hiring-process-image:last-of-type {
+  width: 100px;
+}
+
+.career-Filters {
   width: 100%;
   /* height: 100%; */
   /* border: 1px solid purple ; */
   background-color: #a4238c;
-  padding: 30px;
- }
+  padding: 2% 10%;
+}
 
- .jobs-title{
+.jobs-title {
   color: #fff;
   font-size: larger;
+}
 
- }
-
- .select-div{
+.select-div {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 20px;
   gap: 20px;
- }
+}
+@media all and (max-width: 800px) {
+  .select-div {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .select-div button {
+    width: 50% !important;
+    margin: auto;
+  }
+}

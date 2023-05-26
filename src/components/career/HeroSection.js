@@ -10,23 +10,22 @@ const HeroSection = () => {
         <h1 className="font-poppins text-textColor md:text-[36px] sm:text-[26px] text-[22px] font-semibold">
           Start Work with Us!
         </h1>
-        <p className="font-poppins text-textColor md:text-[19px] text-[13px] font-normal md:leading-[44px] leading-[24px] md:mt-6 mt-5 lg:w-[90%] md:w-full">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+        <p className="font-poppins text-textColor md:text-[19px] text-[13px] font-normal md:leading-[44px] leading-[24px] md:mt-6 mt-5 lg:w-[90%] md:w-full text-justify">
+          If you are passionate about providing solutions to IT needs then
+          Decimal Solutions is a perfect place for you to work. We believe in
+          serving our customers with the best by using the right tools. If you
+          have it in you to contribute to the digital world; submit your resume
+          today and we’ll get back to you.
         </p>
-        <h2 className="font-poppins text-textColor font-semibold md:text-[22px] sm:text-[18px] text-[16px] md:mt-7 sm:mt-5 mt-3">
+        <h2 className="font-poppins text-textColor font-semibold md:text-[22px] sm:text-[18px] text-[16px] md:mt-7 sm:mt-5 mt-3 ">
           Why Working with us?
         </h2>
-        <p className="font-poppins text-textColor md:text-[19px] text-[13px] font-normal md:leading-[44px] leading-[24px] md:mt-7 mt-5 lg:w-[90%] md:w-full">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap.
+        <p className="font-poppins text-textColor md:text-[19px] text-[13px] font-normal md:leading-[44px] leading-[24px] md:mt-7 mt-5 lg:w-[90%] md:w-full text-justify">
+          Decimal Solutions provide a challenging yet innovative platform for
+          all the enthusiasts looking to leave a mark in the digital world. We
+          provide a comfortable and friendly working environment,
+          market-competitive salaries, and continuous opportunities for growth
+          by increasing your learning while working with us.
         </p>
       </div>
       <div className="hidden lg:flex lg:w-1/2 lg:gap-16 pb-4">
