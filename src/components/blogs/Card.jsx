@@ -16,9 +16,9 @@ const Card = (props) => {
         navigation("/blogs/" + id);
       }}
     >
-      <div className=" text-black my-5 items-center justify-center ">
+      <div className="xs:w-[440px] md:w-[401px] text-black my-5 items-center justify-center ">
         <div
-          className="xs:w-[440px] xs:h-[400px]  md:w-[501px] md:h-[460px] relative"
+          className="xs:w-[440px] md:w-[401px] aspect-square relative"
           style={backgroundImage2}
         >
           <div className="bg-[#A4238C]  absolute bottom-0 flex justify-center items-center p-5 text-white opacity-80">
@@ -52,12 +52,10 @@ const Card = (props) => {
             </div>
           </div>
         </div>
-        <h2 className="text-[33px] font-bold mt-8 xs:w-[440px]   md:w-[501px] ">
+        <h2 className="text-[25px] font-bold mt-8 xs:w-[440px]   md:w-[501px] ">
           {props.title}
         </h2>
-        <h1 className="text-[25px] my-4  text-justify xs:w-[440px]   md:w-[501px]  ">
-          {props.description}
-        </h1>
+        <h1 className="text-[20px] my-4  text-justify ">{props.description}</h1>
       </div>
     </div>
   );

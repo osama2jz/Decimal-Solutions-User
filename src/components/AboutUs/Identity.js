@@ -14,12 +14,11 @@ const Identity = () => {
             WHO WE ARE
           </p>
           <p className="font-poppins text-textColor text-[18px] text-center w-[70%]">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has jwfghi been the industry's standard dummy
-            text ever since the 1500s, when an unknown printerca took a galley
-            of type and scrambled it to make a tysape specimen book. It has
-            survived not only a five centuries, but also the leap into
-            electronic typesetting,
+            We are a team of software development and testing enthusiasts,
+            working tirelessly on software quality assurance. The last 2 years
+            were the time we founded, developed, grew, and amazed. And we are
+            still growing by working with some major clients from all over the
+            world.
           </p>
         </div>
         <div className="flex flex-col justify-center items-center w-1/2 flex-1 basis-[300px]">
@@ -32,12 +31,11 @@ const Identity = () => {
             WHAT WE DO
           </p>
           <p className="font-poppins text-textColor text-[18px] text-center w-[70%]">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has jwfghi been the industry's standard dummy
-            text ever since the 1500s, when an unknown printerca took a galley
-            of type and scrambled it to make a tysape specimen book. It has
-            survived not only a five centuries, but also the leap into
-            electronic typesetting,
+            We help set up and maintain a digital presence of your brand or
+            product. Our creative team makes sure that you have the most updated
+            and innovative technology at your hands to boost your business. Your
+            success is our success that’s why we prioritize customization,
+            listen to your needs, and cover all the bases.
           </p>
         </div>
       </div>

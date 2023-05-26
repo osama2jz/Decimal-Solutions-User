@@ -7,14 +7,13 @@ const Mission = () => {
         OUR MISSION
       </h1>
       <q className="font-poppins text-[20px] text-textColor w-[80%] flex-wrap text-center mt-8">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has jwfghi been the industry's standard dummy text
-        ever since the 1500s, when an unknown printerca took a galley of type
-        and scrambled it to make a tysape specimen book. It has survived not
-        only a five centuries, but also the leap into electronic typesetting
+        Our mission is to provide all sorts of IT solutions and services to
+        clients under one umbrella. We aim to provide quality products and
+        perform strict testing so clients can have a product that is ready to
+        use without further updates.
       </q>
       <p className="font-poppins text-textColor text-[21px] mt-3">
-        Mileson Adam John,{" "}
+        Tehseen Riaz Abbasi,{" "}
         <span className="font-poppins text-accentColor text-[21px]">CEO</span>
       </p>
     </div>
