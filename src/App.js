@@ -14,6 +14,7 @@ import ContactUs from "./pages/ContactUs";
 import Projects from "./pages/Projects";
 import Products from "./pages/Product";
 import { Viewjob } from "./pages/Viewjob";
+import { Applyjob } from "./pages/Apply";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/portfolio" element={<Projects />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/apply-job/:id" element={<Applyjob />} />
       </Routes>
       <Footer />
     </Router>

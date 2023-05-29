@@ -3645,3 +3645,17 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
     margin: auto;
   }
 }
+
+.view-Jobs-content {
+  padding: 70px;
+  margin-bottom: 50px;
+}
+.job-description{
+  display: flex;
+  justify-content: space-between;
+}
+
+.list{
+  list-style-type: circle;
+  padding: 10px;
+}
