@@ -3,7 +3,7 @@ import HiringProcess from "../components/career/HiringProcess";
 import { useNavigate } from "react-router-dom";
 
 export const Viewjob = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
     <div>
       <div className="flex items-center justify-center">
@@ -62,14 +62,15 @@ export const Viewjob = () => {
               <text className="text-gray-500 text-lg">10K-20K</text>
             </div>
           </div>
-          <button className="bg-accentColor rounded-full h-[50px] text-white font-poppins font-semibold px-[52px] py-[10px] hover:opacity-90"
-          onClick={()=>navigate("/apply-job/hello")}
+          <button
+            className="bg-accentColor rounded-full h-[50px] text-white font-poppins font-semibold px-[52px] py-[10px] hover:opacity-90"
+            onClick={() => navigate("/apply-job/hello")}
           >
             Apply Now
           </button>
         </div>
         <h1 className="font-bold text-2xl mt-10">Job Description</h1>
-        <p className="mt-10">
+        <p className="mt-10 text-justify text-lg">
           We are Searching for a talented and motivated Laravel developer to
           join our team. As a Laravel developer, you will be responsible for
           designing and developing web applications, APIs, and other web
@@ -78,7 +79,7 @@ export const Viewjob = () => {
           application.
         </p>
         <br />
-        <p className="mb-10">
+        <p className="mb-10 text-justify text-lg">
           We are looking for a Laravel developer to join our team. You will be
           We are Searching for a talented and motivated Laravel developer to
           join our team. As a Laravel developer, you will be responsible for
@@ -87,51 +88,55 @@ export const Viewjob = () => {
           communicating with front-end developers to create a seamless web
           application.
         </p>
-        <h1 className="font-bold text-1xl">Laravel Development Requirements</h1>
+        <h1 className="font-bold text-2xl">Laravel Development Requirements</h1>
 
-        <ul className="list">
-          <li>A degree in Computer Science or a related field</li>
-          <li>Experience working with PHP</li>
-          <li>
+        <ul className="list pb-10">
+          <li className="text-lg">
+            A degree in Computer Science or a related field
+          </li>
+          <li className="text-lg">Experience working with PHP</li>
+          <li className="text-lg">
             Laravel utilizes Composer, a dependency management tool for PHP.
           </li>
-          <li>
+          <li className="text-lg">
             Composer on your system to manage the project's dependencies and
             packages effectively.
           </li>
-          <li>
+          <li className="text-lg">
             {" "}
             Laravel supports various databases, including MySQL, PostgreSQL,
             SQLite, and SQL Server.
           </li>
-          <li>
+          <li className="text-lg">
             Choose a text editor or an integrated development environment (IDE).
           </li>
-          <li>
+          <li className="text-lg">
             Make sure you have a compatible version of PHP as specified by
             Laravel's documentation.
           </li>
         </ul>
-        <h1 className="font-bold text-1xl">Responsibilities</h1>
-        <ul className="list">
-          <li>A degree in Computer Science or a related field</li>
-          <li>Experience working with PHP</li>
-          <li>
+        <h1 className="font-bold text-2xl">Responsibilities</h1>
+        <ul className="list pb-10">
+          <li className="text-lg">
+            A degree in Computer Science or a related field
+          </li>
+          <li className="text-lg">Experience working with PHP</li>
+          <li className="text-lg">
             Laravel utilizes Composer, a dependency management tool for PHP.
           </li>
-          <li>
+          <li className="text-lg">
             Composer on your system to manage the project's dependencies and
             packages effectively.
           </li>
-          <li>
+          <li className="text-lg">
             {" "}
             Laravel supports various databases, including MySQL, PostgreSQL,
             SQLite, and SQL Server.
           </li>
-          <li>
+          <li className="text-lg">
             Choose a text editor or an integrated development environment (IDE).
           </li>
-          <li>
+          <li className="text-lg">
             Make sure you have a compatible version of PHP as specified by
             Laravel's documentation.
           </li>
