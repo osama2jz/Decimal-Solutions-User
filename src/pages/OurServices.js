@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../components/our-services/Banner";
 import MainCover from "../assets/images/main-cover.jpg";
 import RowLayout from "../components/our-services/RowLayout";
 import ServiceImage1 from "../assets/images/service-image-1.jpg";
 import ServiceImage2 from "../assets/images/service-image-2.jpg";
+import axios from "axios";
+import { backendUrl } from "../constants";
+import { Loader, Title } from "@mantine/core";
 
 export default function OurServices() {
+  const [isLoading, setIsLoading] = useState(false);
   const [services, setServices] = useState([
     {
       id: 1,
@@ -50,23 +54,43 @@ export default function OurServices() {
         "Merging the real and virtual to make your business stand out among others is what our AR/VR development team does. The animations created through these technologies give your website a unique look and engage more customers. Our developers create AR and VR apps for iPad, iPhone, Android, and Windows. By combining technology and creativity, we create unique spaces and experiences for you and your business. ",
     },
   ]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios.get(backendUrl + "/api/v1/web/services").then((res) => {
+      setServices(res.data.data);
+      setIsLoading(false);
+    });
+  }, []);
   return (
     <>
       <Banner backgroundImage={MainCover}>Our Services</Banner>
-      <div className="offers my-[70px] flex flex-col gap-[40px] px-[30px] sm:my-[80px] sm:gap-[45px] sm:px-[50px] md:my-[100px] md:gap-[55x] md:px-[80px] lg:my-[115px] lg:gap-[70px] lg:px-[100px] xl:my-[130px] xl:gap-[85px] xl:px-[120px] 2xl:my-[150px] 2xl:gap-[100px] 2xl:px-[146px] ">
-        {services.map((service, index) => {
-          return (
-            <RowLayout
-              border
-              reverse={index % 2 === 0 ? false : true}
-              heading={service.title}
-              image={service.image}
-            >
-              {service.description}
-            </RowLayout>
-          );
-        })}
-      </div>
+      {isLoading ? (
+        <Loader
+          size={"xl"}
+          color="purple"
+          style={{ margin: "auto", marginBlock: "100px" }}
+        />
+      ) : (
+        <div className="offers my-[70px] flex flex-col gap-[40px] px-[30px] sm:my-[80px] sm:gap-[45px] sm:px-[50px] md:my-[100px] md:gap-[55x] md:px-[80px] lg:my-[115px] lg:gap-[70px] lg:px-[100px] xl:my-[130px] xl:gap-[85px] xl:px-[120px] 2xl:my-[150px] 2xl:gap-[100px] 2xl:px-[146px] ">
+          {services.length ? (
+            services.map((service, index) => {
+              return (
+                <RowLayout
+                  border
+                  reverse={index % 2 === 0 ? false : true}
+                  heading={service.title}
+                  image={service.coverImage}
+                >
+                  {service.description}
+                </RowLayout>
+              );
+            })
+          ) : (
+            <Title>No Serivces Available</Title>
+          )}
+        </div>
+      )}
     </>
   );
 }
