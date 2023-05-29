@@ -10,36 +10,7 @@ import { Loader, Title } from "@mantine/core";
 
 function Product() {
   const [isLoading, setIsLoading] = useState(false);
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      title: "Website Development",
-      image: ServiceImage1,
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has jwfghi been the industry's standard dummy text ever since the 1500s, when an unknown printerca took a galley of type and scrambled it to make a tysape specimen book. It has survived not only a five centuries, but also the leap into electronic typesetting.",
-    },
-    {
-      id: 2,
-      title: "CRM Based Solutions",
-      image: ServiceImage2,
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has jwfghi been the industry's standard dummy text ever since the 1500s, when an unknown printerca took a galley of type and scrambled it to make a tysape specimen book. It has survived not only a five centuries, but also the leap into electronic typesetting.",
-    },
-    {
-      id: 3,
-      title: "Health Based Solutions",
-      image: ServiceImage1,
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has jwfghi been the industry's standard dummy text ever since the 1500s, when an unknown printerca took a galley of type and scrambled it to make a tysape specimen book. It has survived not only a five centuries, but also the leap into electronic typesetting.",
-    },
-    {
-      id: 4,
-      title: "E-commerce Based Solutions",
-      image: ServiceImage2,
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has jwfghi been the industry's standard dummy text ever since the 1500s, when an unknown printerca took a galley of type and scrambled it to make a tysape specimen book. It has survived not only a five centuries, but also the leap into electronic typesetting.",
-    },
-  ]);
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     setIsLoading(true);
     axios.get(backendUrl + "/api/v1/web/products").then((res) => {
@@ -67,7 +38,7 @@ function Product() {
                   border
                   reverse={index % 2 === 0 ? false : true}
                   heading={product.title}
-                  image={product.image}
+                  image={product.coverImage}
                   style={{ backgroundImage: "red" }}
                 >
                   {product.description}
