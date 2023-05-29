@@ -1,48 +1,26 @@
-import { Button, CopyButton, Select } from "@mantine/core";
-import React from "react";
+import { Button, CopyButton, Loader, Select, Title } from "@mantine/core";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useNavigate } from "react-router-dom";
-const jobs = [
-  {
-    title: "Data Scientist",
-    type: "Full Time, Part Time",
-    seats: 4,
-  },
-  {
-    title: "Data Scientist",
-    type: "Full Time, Part Time",
-    seats: 4,
-  },
-  {
-    title: "Data Scientist",
-    type: "Full Time, Part Time",
-    seats: 4,
-  },
-  {
-    title: "Data Scientist",
-    type: "Full Time, Part Time",
-    seats: 4,
-  },
-  {
-    title: "Data Scientist",
-    type: "Full Time, Part Time",
-    seats: 4,
-  },
-  {
-    title: "Data Scientist",
-    type: "Full Time, Part Time",
-    seats: 4,
-  },
-];
+import { backendUrl } from "../../constants";
 
-const JobPosting = ({ title, type, seats }) => {
-  const navigate=useNavigate()
+const JobPosting = ({ jobData }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full flex-1 aspect-[1.4] flex flex-col items-center justify-center gap-[10px] rounded-[24px] border-2 border-boxColor md:py-[30px]">
-      <h1 className="font-semibold sm:text-[30px] md:mt-0 sm:py-3">{title}</h1>
-      <p className="2xl:text-[24px]">Type: {type}</p>
-      <p className="2xl:text-[24px]">Vacancy: {seats}</p>
-      <button className="bg-accentColor rounded-full text-white font-poppins font-semibold px-[52px] py-[10px]" onClick={()=>navigate('/view-job/hehe')}>
+      <h1 className="font-semibold sm:text-[30px] md:mt-0 sm:py-3">
+        {jobData?.title}
+      </h1>
+      <p className="2xl:text-[24px]">Type: {jobData?.category?.title}</p>
+      <p className="2xl:text-[24px]">Vacancy: {jobData?.vacancies}</p>
+      <button
+        className="bg-accentColor rounded-full text-white font-poppins font-semibold px-[52px] py-[10px]"
+        onClick={() =>
+          navigate("/view-job/hehe", { state: { jobData: jobData } })
+        }
+      >
         Read More
       </button>
     </div>
@@ -50,6 +28,16 @@ const JobPosting = ({ title, type, seats }) => {
 };
 
 const Jobs = ({ title, type, seats }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios.get(backendUrl + "/api/v1/web/jobs").then((res) => {
+      setJobs(res.data.data);
+      setIsLoading(false);
+    });
+  }, []);
   return (
     <div>
       <div className="career-Filters">
@@ -88,11 +76,21 @@ const Jobs = ({ title, type, seats }) => {
         </div>
       </div>
 
-      <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-20 w-[80%] m-auto my-20">
-        {jobs.map((job) => (
-          <JobPosting title={job.title} type={job.type} seats={job.seats} />
-        ))}
-      </div>
+      {isLoading ? (
+        <Loader
+          size={"xl"}
+          color="purple"
+          style={{ margin: "auto", marginBlock: "100px" }}
+        />
+      ) : (
+        <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-20 w-[80%] m-auto my-20">
+          {jobs.length ? (
+            jobs.map((job) => <JobPosting jobData={job} />)
+          ) : (
+            <Title>No Job Available</Title>
+          )}
+        </div>
+      )}
     </div>
   );
 };
