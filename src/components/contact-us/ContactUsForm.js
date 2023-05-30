@@ -21,7 +21,7 @@ const contactUsForm = () => {
               </span>
               <div>
                 <span className="font-poppins text-[12px] font-normal sm:text-[16px] md:text-[22px]">
-                  +92 300 7171197, +92 335 4749732
+                  +92 345 5893337
                 </span>
               </div>
             </div>
@@ -41,8 +41,8 @@ const contactUsForm = () => {
               </span>
               <div>
                 <span className="font-poppins  text-[12px] font-normal sm:text-[16px] md:text-[22px]">
-                  Office No# 11, 3rd Floor, Capital Trade Center, F-10 Markaz,
-                  Islamabad
+                  Office No# 17, 2nd Floor, Zaki Centre, I-8 Markaz Islamabad,
+                  44000
                 </span>
               </div>
             </div>
