@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../../src/App.css";
 import porfolio from "./porfolio.png";
 import one from "./1.png";
@@ -15,6 +15,9 @@ import { ReactComponent as LinkIcon } from "../../../src/assets/icons/link-outli
 import kaiya from "../../../src/assets/images/Kaiya.jpg";
 import satoshi from "../../../src/assets/images/Satoshi VR.jpg";
 import plantCare from "../../../src/assets/images/Plant Care.jpg";
+import axios from "axios";
+import { backendUrl } from "../../constants";
+import { Loader, Title } from "@mantine/core";
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
@@ -173,6 +176,7 @@ const AllBlogs = () => {
   };
   const [blogs, setBlogs] = React.useState(blogsArray);
   const [page, setPage] = React.useState(0);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   const [porfolioData, setPorfolioData] = React.useState([
     {
@@ -453,6 +457,16 @@ const AllBlogs = () => {
     },
   ]);
 
+  useEffect(() => {
+    setIsLoading(true);
+    axios.get(backendUrl + "/api/v1/web/groupedprojects").then((res) => {
+      setPorfolioData(res.data.data);
+      setIsLoading(false);
+    });
+  }, []);
+
+  console.log("adata", porfolioData);
+
   console.log(porfolioData);
   return (
     <Wrapper>
@@ -527,51 +541,58 @@ const AllBlogs = () => {
           </button>
         </div> */}
 
-        {porfolioData.map((portfolio, index) => {
-          return (
-            <div className="container mx-auto px-10 mt-10" key={index}>
-              <div class="portfolio-heading">
-                <div class="portfolio-title">
-                  <span class="por-title">
-                    {" "}
-                    &lt;&nbsp;{portfolio?.heading}&nbsp;&gt;{" "}
-                  </span>
-                </div>
-              </div>
-              <Slider {...settings}>
-                {portfolio?.card?.map((card, index) => {
-                  return (
-                    <div class="carousel__slide mb-10">
-                      <div
-                        class="card"
-                        style={{
-                          marginRight: "6rem",
-                        }}
-                      >
-                        <div class="card__inner">
-                          <div class="card__image">
-                            <img src={card?.image} alt="Kaiya Screenshot" />
+        {isLoading ? (
+          <Loader
+            size={"xl"}
+            color="purple"
+            style={{ margin: "auto", marginBlock: "100px" }}
+          />
+        ) : (
+          <>
+            {porfolioData?.map((portfolio, index) => {
+              return (
+                <div className="container mx-auto px-10 mt-10" key={index}>
+                  <div class="portfolio-heading">
+                    <div class="portfolio-title">
+                      <span class="por-title">
+                        {" "}
+                        &lt;&nbsp;{portfolio?.category}&nbsp;&gt;{" "}
+                      </span>
+                    </div>
+                  </div>
+                  <Slider {...settings}>
+                    {portfolio?.projects?.map((card, index) => {
+                      return (
+                        <div class="carousel__slide mb-10">
+                          <div
+                            class="card"
+                            style={{
+                              marginRight: "6rem",
+                            }}
+                          >
+                            <div class="card__inner">
+                              <div class="card__image">
+                                <img src={card?.image} alt="Kaiya Screenshot" />
+                              </div>
+                            </div>
+                            <div class="hover__overlay">
+                              <h3>{card?.title}</h3>
+                              <p>{card?.description}</p>
+
+                              <a href={card?.link} class="link__icon">
+                                <LinkIcon />
+                              </a>
+                            </div>
                           </div>
                         </div>
-                        <div class="hover__overlay">
-                          <h3>{card?.title}</h3>
-                          <p>
-                            We are offering a huge variety of services from web
-                            development to web hosting.
-                          </p>
-
-                          <a href="#" class="link__icon">
-                            <LinkIcon />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </Slider>
-            </div>
-          );
-        })}
+                      );
+                    })}
+                  </Slider>
+                </div>
+              );
+            })}
+          </>
+        )}
       </div>
     </Wrapper>
   );
