@@ -1,8 +1,8 @@
-import AllBlogs from "../components/projects/AllBlogs";
+import AllProjects from "../components/projects/AllProjects";
 function Projects() {
   return (
     <div>
-      <AllBlogs />
+      <AllProjects />
     </div>
   );
 }

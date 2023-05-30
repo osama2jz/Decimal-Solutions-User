@@ -97,25 +97,25 @@ function Header() {
         {showMenu ? (
           <div class="mobile-nav">
             <ul class="menu">
-              <li class="current" onClick={() => setShowMenu(!showMenu)} >
+              <li class="item current">
                 <Link to="/">Home</Link>
               </li>
-              <li class="" onClick={() => setShowMenu(!showMenu)}>
+              <li class="item">
                 <Link to="/our-services">Services</Link>
               </li>
-              <li class="" onClick={() => setShowMenu(!showMenu)}>
+              <li class="item">
                 <Link to="/portfolio">Portfolio</Link>
               </li>
-              <li class="" onClick={() => setShowMenu(!showMenu)}>
-                <Link to="/projects">Our Products</Link>
+              <li class="item">
+                <Link to="/products">Our Products</Link>
               </li>
-              <li class="" onClick={() => setShowMenu(!showMenu)}>
+              <li class="item">
                 <Link to="/career">Careers</Link>
               </li>
-              <li class="" onClick={() => setShowMenu(!showMenu)}>
+              <li class="item">
                 <Link to="/about-us">About Us</Link>
               </li>
-              <li class="" onClick={() => setShowMenu(!showMenu)}>
+              <li class="item">
                 <Link to="/blogs">Blog</Link>
               </li>
             </ul>

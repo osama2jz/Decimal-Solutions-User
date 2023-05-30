@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import kaiya from "../../../assets/images/Kaiya.jpg";
 import satoshi from "../../../assets/images/Satoshi VR.jpg";
@@ -13,6 +13,9 @@ import { CarouselItem } from "react-bootstrap";
 import Slider from "react-slick";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import axios from "axios";
+import { backendUrl } from "../../../constants";
+import { Title } from "@mantine/core";
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
@@ -48,6 +51,10 @@ function SampleNextArrow(props) {
 }
 
 function Services() {
+  const [filter, setFilter] = React.useState("all");
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [projectData, setProjectData] = React.useState([]);
+  const [services, setServices] = React.useState([]);
   var settings = {
     // dots: true,
     infinite: false,
@@ -84,6 +91,22 @@ function Services() {
       },
     ],
   };
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      .get(backendUrl + `/api/v1/web/homeScreenProjects/${filter}`)
+      .then((res) => {
+        setProjectData(res.data.data);
+        setIsLoading(false);
+      });
+  }, [filter]);
+  useEffect(() => {
+    setIsLoading(true);
+    axios.get(backendUrl + `/api/v1/web/services`).then((res) => {
+      setServices(res.data.data);
+      setIsLoading(false);
+    });
+  }, []);
   return (
     <Wrapper>
       <div className="projects-container">
@@ -94,13 +117,26 @@ function Services() {
           </div>
         </div>
         <div class="project-tags">
-          <button>All</button>
-          <button>Web Development</button>
-          <button>Mobile App Development</button>
-          <button>Graphic Designing</button>
-          <button>Digital Marketing</button>
-          <button>ERP & Business Solutions</button>
-          <button>AR/VR</button>
+          <button
+            style={{
+              backgroundColor: filter === "all" ? "purple" : "white",
+              color: filter === "all" ? "white" : "black",
+            }}
+            onClick={() => setFilter("all")}
+          >
+            All
+          </button>
+          {services.map((obj, ind) => (
+            <button
+              style={{
+                backgroundColor: filter === obj._id ? "purple" : "white",
+                color: filter === obj?._id ? "white" : "black",
+              }}
+              onClick={() => setFilter(obj._id)}
+            >
+              {obj.title}
+            </button>
+          ))}
         </div>
       </div>
       <div
@@ -112,151 +148,34 @@ function Services() {
         }}
       >
         <Slider {...settings}>
-          <div class="carousel__slide">
-            <div
-              class="card"
-              style={{
-                marginRight: "3rem",
-              }}
-            >
-              <div class="card__inner">
-                <div class="card__image">
-                  <img src={kaiya} alt="Kaiya Screenshot" />
+          {projectData.length ? (
+            projectData.map((obj) => (
+              <div class="carousel__slide">
+                <div
+                  class="card"
+                  style={{
+                    marginRight: "3rem",
+                  }}
+                >
+                  <div class="card__inner">
+                    <div class="card__image">
+                      <img src={obj?.coverImage} alt="Kaiya Screenshot" />
+                    </div>
+                  </div>
+                  <div class="hover__overlay">
+                    <h3>{obj?.title}</h3>
+                    <p>{obj?.shortDescription}</p>
+
+                    <a href="/view-project" class="link__icon">
+                      <LinkIcon />
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="hover__overlay">
-                <h3>Kaiya</h3>
-                <p>
-                  We are offering a huge variety of services from web
-                  development to web hosting.
-                </p>
-                
-                <a href="#" class="link__icon">
-                  <LinkIcon />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel__slide">
-            <div
-              class="card"
-              style={{
-                marginRight: "3rem",
-              }}
-            >
-              <div class="card__inner">
-                <div class="card__image">
-                  <img src={satoshi} alt="Satoshi Screenshot" />
-                </div>
-              </div>
-              <div class="hover__overlay">
-                <h3>Kaiya</h3>
-                <p>
-                  We are offering a huge variety of services from web
-                  development to web hosting.
-                </p>
-                <a href="#" class="link__icon">
-                  <LinkIcon />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel__slide">
-            <div
-              class="card"
-              style={{
-                marginRight: "3rem",
-              }}
-            >
-              <div class="card__inner">
-                <div class="card__image">
-                  <img src={plantCare} alt="Plant Care" />
-                </div>
-              </div>
-              <div class="hover__overlay">
-                <h3>Kaiya</h3>
-                <p>
-                  We are offering a huge variety of services from web
-                  development to web hosting.
-                </p>
-                <a href="#" class="link__icon">
-                  <LinkIcon />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel__slide">
-            <div
-              class="card"
-              style={{
-                marginRight: "3rem",
-              }}
-            >
-              <div class="card__inner">
-                <div class="card__image">
-                  <img src={plantCare} alt="plant Care Screenshot" />
-                </div>
-              </div>
-              <div class="hover__overlay">
-                <h3>Kaiya</h3>
-                <p>
-                  We are offering a huge variety of services from web
-                  development to web hosting.
-                </p>
-                <a href="#" class="link__icon">
-                  <LinkIcon />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel__slide">
-            <div
-              class="card"
-              style={{
-                marginRight: "3rem",
-              }}
-            >
-              <div class="card__inner">
-                <div class="card__image">
-                  <img src={satoshi} alt="Satoshi Screenshot" />
-                </div>
-              </div>
-              <div class="hover__overlay">
-                <h3>Kaiya</h3>
-                <p>
-                  We are offering a huge variety of services from web
-                  development to web hosting.
-                </p>
-                <a href="#" class="link__icon">
-                  <LinkIcon />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="carousel__slide">
-            <div
-              class="card"
-              style={{
-                marginRight: "3rem",
-              }}
-            >
-              <div class="card__inner">
-                <div class="card__image">
-                  <img src={kaiya} alt="Plant Care" />
-                </div>
-              </div>
-              <div class="hover__overlay">
-                <h3>Kaiya</h3>
-                <p>
-                  We are offering a huge variety of services from web
-                  development to web hosting.
-                </p>
-                <a href="#" class="link__icon">
-                  <LinkIcon />
-                </a>
-              </div>
-            </div>
-          </div>
+            ))
+          ) : (
+            <Title>No Project Found</Title>
+          )}
         </Slider>
       </div>
     </Wrapper>
