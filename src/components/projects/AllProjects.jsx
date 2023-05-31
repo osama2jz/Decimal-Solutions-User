@@ -11,6 +11,7 @@ import { ReactComponent as LinkIcon } from "../../../src/assets/icons/link-outli
 import { backendUrl } from "../../constants";
 import Wrapper from "./ProjectWrapper";
 import porfolio from "./porfolio.png";
+import { useNavigate } from "react-router-dom";
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
@@ -91,6 +92,7 @@ const AllProjects = () => {
   const [filter, setFilter] = React.useState("all");
   const [porfolioData, setPorfolioData] = React.useState([]);
   const [filteredData, setFilteredData] = React.useState([]);
+  const navigate=useNavigate()
 
   useEffect(() => {
     setIsLoading(true);
@@ -108,7 +110,7 @@ const AllProjects = () => {
       setFilteredData(filtered);
     }
   }, [filter, porfolioData]);
-  console.log(filteredData, porfolioData);
+ 
   return (
     <Wrapper>
       <div>
@@ -218,6 +220,11 @@ const AllProjects = () => {
                               style={{
                                 marginRight: "6rem",
                               }}
+                              onClick={()=>navigate("/project-detail",
+                              {
+                                state:{projectData:card, category:portfolio?.category
+                                }
+                              })}
                             >
                               <div class="card__inner">
                                 <div class="card__image">

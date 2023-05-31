@@ -3659,3 +3659,19 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
   list-style-type: circle;
   padding: 10px;
 }
+.project-Detail-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1 px solid #a4238c;
+  background-color: #e0e0e0;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: -10px;
+}
+
+
