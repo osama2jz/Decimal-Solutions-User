@@ -156,7 +156,7 @@ function Services() {
                     <h3>{obj?.title}</h3>
                     <p>{obj?.shortDescription}</p>
 
-                    <a href="/view-project" class="link__icon">
+                    <a href="/view-projects" class="link__icon">
                       <LinkIcon />
                     </a>
                   </div>

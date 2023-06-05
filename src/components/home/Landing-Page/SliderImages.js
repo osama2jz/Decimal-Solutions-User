@@ -37,12 +37,6 @@ function SliderImages() {
                     Welcome to <br />
                     Decimal Solutions...
                   </h1>
-                  <div class="button__container">
-                    <a href="#">
-                      Get a quote
-                      <PlaneIcon />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -61,12 +55,6 @@ function SliderImages() {
                     Development By <br />
                     Professionals
                   </h1>
-                  <div class="button__container">
-                    <a href="#">
-                      Get a quote
-                      <PlaneIcon />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -85,12 +73,6 @@ function SliderImages() {
                     Development By <br/>
                     Professionals
                   </h1>
-                  <div class="button__container">
-                    <a href="#">
-                      Get a quote
-                      <PlaneIcon />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -108,12 +90,6 @@ function SliderImages() {
                     Best ERP Solutions <br />
                     For Online Business
                   </h1>
-                  <div class="button__container">
-                    <a href="#">
-                      Get a quote
-                      <PlaneIcon />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>

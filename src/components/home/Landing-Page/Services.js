@@ -130,7 +130,7 @@ function Services() {
                     </div>
                     <div class="hover__overlay">
                       <p>{obj?.shortDescription}</p>
-                      <a href="/our-service" class="link__icon">
+                      <a href="/our-services" class="link__icon">
                         <LinkIcon className="img" />
                       </a>
                     </div>
