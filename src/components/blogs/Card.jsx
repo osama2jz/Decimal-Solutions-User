@@ -13,7 +13,11 @@ const Card = (props) => {
     <div
       className="flex justify-center hover:cursor-pointer"
       onClick={() => {
-        navigation("/blogs/" + id);
+        navigation("/blogs/" + id,{
+          state:{
+            data:props.data
+          }
+        });
       }}
     >
       <div className="xs:w-[440px] md:w-[401px] text-black my-5 items-center justify-center ">
@@ -21,7 +25,7 @@ const Card = (props) => {
           className="xs:w-[440px] md:w-[401px] aspect-square relative"
           style={backgroundImage2}
         >
-          <div className="bg-[#A4238C]  absolute bottom-0 flex justify-center items-center p-5 text-white opacity-80">
+          {/* <div className="bg-[#A4238C]  absolute bottom-0 flex justify-center items-center p-5 text-white opacity-80">
             <div className="border-t-4">
               <h1 className="text-6xl font-bold flex justify-start h-full items-end  ">
                 {props?.date?.split(" ")[0]}
@@ -35,7 +39,7 @@ const Card = (props) => {
                 {props?.date?.split(" ")[2]}
               </h1>
             </div>
-          </div>
+          </div> */}
           <div className="absolute bottom-0 flex justify-center items-center p-5 text-white ">
             <div className="border-t-4">
               <h1 className="text-6xl font-bold flex justify-start h-full items-end  ">
@@ -55,7 +59,7 @@ const Card = (props) => {
         <h2 className="text-[25px] font-bold mt-8 xs:w-[440px]   md:w-[501px] ">
           {props.title}
         </h2>
-        <h1 className="text-[20px] my-4  text-justify ">{props.description}</h1>
+        {/* <h1 className="text-[20px] my-4  text-justify ">{props.description}</h1> */}
       </div>
     </div>
   );

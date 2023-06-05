@@ -6,6 +6,7 @@ import Pagination from "../components/blogs/Pagination";
 import axios from "axios";
 import { backendUrl } from "../constants";
 import { Loader, Title } from "@mantine/core";
+import moment from "moment";
 
 const AllBlogs = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -51,8 +52,9 @@ const AllBlogs = () => {
                     key={index}
                     image={blog.blogImage}
                     title={blog.blogTitle}
-                    date={blog.blogDate}
+                    date={moment(blog.createdAt).format("DD MMMM YYYY")}
                     description={blog.blogDescription}
+                    data={blog}
                   />
                 );
               }
