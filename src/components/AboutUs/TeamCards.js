@@ -30,11 +30,13 @@ const TeamCards = (props) => {
               <img
                 alt="user"
                 src={item.teamMemberImage}
-                className="xs:w-[350px] aspect-square object-cover rounded-2xl"
+                onClick={()=>window.location.href(item?.githubLink)}
+                className="xs:w-[350px] aspect-square object-cover rounded-2xl cursor-pointer"
               />
               <div className="">
                 <h1 className="font-bold text-xl">{item.teamMemberName}</h1>
                 <p className="font-poppins">{item.teamMemberTitle}</p>
+                <p className="text-xs">{item?.officialPhone}</p>
               </div>
             </div>
           </div>

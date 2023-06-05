@@ -1,23 +1,19 @@
-import React, { useState } from "react";
-import HiringProcess from "../components/career/HiringProcess";
-import { useForm } from "@mantine/form";
 import {
   Flex,
-  Group,
   Loader,
   Select,
   SimpleGrid,
-  Text,
   TextInput,
-  Title,
+  Title
 } from "@mantine/core";
-import { Dropzone, IMAGE_MIME_TYPE } from "@mantine/dropzone";
-import { DatePicker } from "@mantine/dates";
-import { IconPhoto, IconUpload, IconX } from "@tabler/icons-react";
-import { Check, Upload } from "tabler-icons-react";
-import { backendUrl } from "../constants";
+import { useForm } from "@mantine/form";
 import axios from "axios";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Check } from "tabler-icons-react";
+import DropZone from "../components/Dropzone";
+import HiringProcess from "../components/career/HiringProcess";
+import { backendUrl } from "../constants";
 
 export const Applyjob = () => {
   const { jobData } = useLocation().state;
@@ -28,8 +24,10 @@ export const Applyjob = () => {
     initialValues: {
       fullName: "",
       email: "",
-      resume: "",
-      DOB: "",
+      resume: null,
+      contactNumber: "",
+      whatsappNumber: "",
+      yearsOfExperience: "",
       gender: "",
       address: "",
       applicantComments: "",
@@ -37,15 +35,20 @@ export const Applyjob = () => {
     validate: {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
       fullName: (value) => (value.length < 2 ? "Enter full name" : null),
-      DOB: (value) => (value.length < 2 ? "Enter date of birth" : null),
-      gender: (value) => (value.length < 2 ? "Select gender" : null),
-      address: (value) => (value.length < 2 ? "Enter full address" : null),
-      // interestedIn: (value) => (value.length < 2 ?  : null),
+      contactNumber: (value) =>
+        value.length < 1 ? "Enter enter contact number" : null,
+      whatsappNumber: (value) =>
+        value.length < 1 ? "Enter whatsapp number" : null,
+      yearsOfExperience: (value) =>
+        value.length < 1 ? "Select experience" : null,
+      gender: (value) => (value.length < 1 ? "Select gender" : null),
+      address: (value) => (value.length < 1 ? "Enter city" : null),
+      resume: (value) => (!value ? "Upload Resume" : null),
     },
   });
   const applyforJob = (values) => {
     setIsLoading(true);
-    values.job = jobData?.id;
+    values.job = jobData?._id;
     axios
       .post(backendUrl + "/api/v1/web/jobApplications", values)
       .then((res) => {
@@ -75,7 +78,7 @@ export const Applyjob = () => {
               {" "}
               &lt;&nbsp;USQUARE SOLUTIONS&nbsp;&gt;{" "}
             </span>
-            <h2 className="font-bold text-3xl">UNITY 3D DEVELOPER</h2>
+            <h2 className="font-bold text-3xl">{jobData?.title}</h2>
           </div>
         </div>
         <h1 className="text-2xl font-bold text-gray">Apply Online</h1>
@@ -105,17 +108,6 @@ export const Applyjob = () => {
                 size="lg"
                 {...form.getInputProps("email")}
               />
-              <DatePicker
-                placeholder="Date of Birth"
-                size={"lg"}
-                {...form.getInputProps("DOB")}
-              />
-              {/* <TextInput placeholder="Date of Birth" size="lg" /> */}
-              <TextInput
-                placeholder="Address"
-                size="lg"
-                {...form.getInputProps("address")}
-              />
               <Select
                 placeholder="Gender"
                 data={[
@@ -126,44 +118,35 @@ export const Applyjob = () => {
                 {...form.getInputProps("gender")}
               />
               <TextInput
-                placeholder="Interested in"
+                placeholder="City"
                 size="lg"
-                {...form.getInputProps("applicantComments")}
+                {...form.getInputProps("address")}
+              />
+              <TextInput
+                placeholder="Contact Number"
+                size="lg"
+                type="number"
+                {...form.getInputProps("contactNumber")}
+              />
+              <TextInput
+                placeholder="Whatsapp Number"
+                size="lg"
+                type="number"
+                {...form.getInputProps("whatsappNumber")}
+              />
+              <Select
+                placeholder="Experience (in Years)"
+                data={["0-1", "1-3", "3-5", "5-8", "8-10", "10-15", "15+"]}
+                size="lg"
+                {...form.getInputProps("yearsOfExperience")}
               />
             </SimpleGrid>
-            <Dropzone
-              className="mt-5"
-              onDrop={(files) => console.log("accepted files", files)}
-              onReject={(files) => console.log("rejected files", files)}
-              maxSize={3 * 1024 ** 2}
-              accept={IMAGE_MIME_TYPE}
-            >
-              <Group
-                position="center"
-                spacing="xl"
-                style={{ minHeight: "150px", pointerEvents: "none" }}
-              >
-                <Dropzone.Accept>
-                  <IconUpload size="3.2rem" stroke={1.5} />
-                </Dropzone.Accept>
-                <Dropzone.Reject>
-                  <IconX
-                    size="3.2rem"
-                    stroke={1.5}
-                    // color={theme.colors.red[theme.colorScheme === "dark" ? 4 : 6]}
-                  />
-                </Dropzone.Reject>
-                <Dropzone.Idle>
-                  <Upload size="3.2rem" />
-                </Dropzone.Idle>
-
-                <div>
-                  <Text size="xl" inline>
-                    Upload Your Resume here{" "}
-                  </Text>
-                </div>
-              </Group>
-            </Dropzone>
+            <DropZone
+              form={form}
+              folderName={"jobApplications"}
+              name={"resume"}
+              label="Resume"
+            />
 
             <button
               type="submit"
