@@ -13,7 +13,7 @@ import { Loader } from "@mantine/core";
 
 function SliderImages() {
   const [isLoading, setIsLoading] = useState(false);
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState([Banner1]);
   const settings = {
     dots: true,
     infinite: true,
@@ -34,7 +34,7 @@ function SliderImages() {
     <Wrapper>
       <div>
         <Slider {...settings}>
-          <div class="img-slider-header">
+          {/* <div class="img-slider-header">
             <div class="slide active">
               <img src={Banner1} alt="People working in an office" />
               <div class="content">
@@ -50,7 +50,7 @@ function SliderImages() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {images?.map((obj) => (
             <div class="img-slider-header">
               <div class="slide active">
