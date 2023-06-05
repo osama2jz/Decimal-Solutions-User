@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import {
   BsFillArrowLeftCircleFill,
@@ -7,13 +8,6 @@ import Slider from "react-slick";
 import "../../../App.css";
 import Wrapper from "../../../AppWrapper";
 import { ReactComponent as LinkIcon } from "../../../assets/icons/link-outlined.svg";
-import { ReactComponent as ARIcon } from "../../../assets/svgs/AR VR.svg";
-import { ReactComponent as AppIcon } from "../../../assets/svgs/App Development.svg";
-import { ReactComponent as MarketingIcon } from "../../../assets/svgs/Digital Marketing.svg";
-import { ReactComponent as ErpIcon } from "../../../assets/svgs/ERP.svg";
-import { ReactComponent as GraphicIcon } from "../../../assets/svgs/Graphic Desiging.svg";
-import { ReactComponent as WebIcon } from "../../../assets/svgs/Web Development.svg";
-import axios from "axios";
 import { backendUrl } from "../../../constants";
 
 function SamplePrevArrow(props) {

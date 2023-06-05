@@ -1,21 +1,12 @@
-import React, { useEffect } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import kaiya from "../../../assets/images/Kaiya.jpg";
-import satoshi from "../../../assets/images/Satoshi VR.jpg";
-import plantCare from "../../../assets/images/Plant Care.jpg";
-import Banner3 from "../../../assets/images/new-banner-3.jpeg";
-import { ReactComponent as AppIcon } from "../../../assets/svgs/App Development.svg";
-import { ReactComponent as GraphicIcon } from "../../../assets/svgs/Graphic Desiging.svg";
-import "../../../App.css";
-import Wrapper from "./ProjectWrapper";
-import { ReactComponent as LinkIcon } from "../../../assets/icons/link-outlined.svg";
-import { CarouselItem } from "react-bootstrap";
-import Slider from "react-slick";
-import { BsFillArrowLeftCircleFill } from "react-icons/bs";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import axios from "axios";
-import { backendUrl } from "../../../constants";
 import { Title } from "@mantine/core";
+import axios from "axios";
+import React, { useEffect } from "react";
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
+import Slider from "react-slick";
+import "../../../App.css";
+import { ReactComponent as LinkIcon } from "../../../assets/icons/link-outlined.svg";
+import { backendUrl } from "../../../constants";
+import Wrapper from "./ProjectWrapper";
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
@@ -54,7 +45,6 @@ function Services() {
   const [filter, setFilter] = React.useState("all");
   const [isLoading, setIsLoading] = React.useState(false);
   const [projectData, setProjectData] = React.useState([]);
-  const [services, setServices] = React.useState([]);
   var settings = {
     // dots: true,
     infinite: false,
@@ -94,19 +84,19 @@ function Services() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(backendUrl + `/api/v1/web/homeScreenProjects/${filter}`)
+      .get(backendUrl + `/api/v1/web/homeScreenProjects/all`)
       .then((res) => {
         setProjectData(res.data.data);
         setIsLoading(false);
       });
   }, [filter]);
-  useEffect(() => {
-    setIsLoading(true);
-    axios.get(backendUrl + `/api/v1/web/services`).then((res) => {
-      setServices(res.data.data);
-      setIsLoading(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   axios.get(backendUrl + `/api/v1/web/services`).then((res) => {
+  //     setServices(res.data.data);
+  //     setIsLoading(false);
+  //   });
+  // }, []);
   return (
     <Wrapper>
       <div className="projects-container">
@@ -116,7 +106,7 @@ function Services() {
             <h2>Some Latest Client Projects</h2>
           </div>
         </div>
-        <div class="project-tags">
+        {/* <div class="project-tags">
           <button
             style={{
               backgroundColor: filter === "all" ? "purple" : "white",
@@ -136,8 +126,8 @@ function Services() {
             >
               {obj.title}
             </button>
-          ))}
-        </div>
+          ))} */}
+        {/* </div> */}
       </div>
       <div
         style={{

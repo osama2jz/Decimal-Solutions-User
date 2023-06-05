@@ -91,6 +91,7 @@ const AllProjects = () => {
   const [filter, setFilter] = React.useState("all");
   const [porfolioData, setPorfolioData] = React.useState([]);
   const [filteredData, setFilteredData] = React.useState([]);
+  const [services, setServices] = React.useState([]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -99,16 +100,24 @@ const AllProjects = () => {
       setIsLoading(false);
     });
   }, []);
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios.get(backendUrl + `/api/v1/web/services`).then((res) => {
+      setServices(res.data.data);
+      setIsLoading(false);
+    });
+  }, []);
+
   useEffect(() => {
     if (filter === "all") setFilteredData(porfolioData);
     else {
       let filtered = porfolioData.filter((obj) => {
-        return obj.category.toLowerCase().includes(filter);
+        return obj.category === filter;
       });
       setFilteredData(filtered);
     }
   }, [filter, porfolioData]);
-  console.log(filteredData, porfolioData);
   return (
     <Wrapper>
       <div>
@@ -133,60 +142,17 @@ const AllProjects = () => {
             >
               All
             </button>
-            <button
-              style={{
-                backgroundColor: filter === "web" ? "purple" : "white",
-                color: filter === "web" ? "white" : "black",
-              }}
-              onClick={() => setFilter("web")}
-            >
-              Web Development
-            </button>
-            <button
-              style={{
-                backgroundColor: filter === "mobile" ? "purple" : "white",
-                color: filter === "mobile" ? "white" : "black",
-              }}
-              onClick={() => setFilter("mobile")}
-            >
-              Mobile App Development
-            </button>
-            <button
-              style={{
-                backgroundColor: filter === "graphics" ? "purple" : "white",
-                color: filter === "graphics" ? "white" : "black",
-              }}
-              onClick={() => setFilter("graphics")}
-            >
-              Graphic Designing
-            </button>
-            <button
-              style={{
-                backgroundColor: filter === "digital" ? "purple" : "white",
-                color: filter === "digital" ? "white" : "black",
-              }}
-              onClick={() => setFilter("digital")}
-            >
-              Digital Marketing
-            </button>
-            <button
-              style={{
-                backgroundColor: filter === "erp" ? "purple" : "white",
-                color: filter === "erp" ? "white" : "black",
-              }}
-              onClick={() => setFilter("erp")}
-            >
-              ERP & Business Solutions
-            </button>
-            <button
-              style={{
-                backgroundColor: filter === "ar" ? "purple" : "white",
-                color: filter === "ar" ? "white" : "black",
-              }}
-              onClick={() => setFilter("ar")}
-            >
-              AR/VR
-            </button>
+            {services.map((obj, ind) => (
+              <button
+                style={{
+                  backgroundColor: filter === obj?.title ? "purple" : "white",
+                  color: filter === obj?.title ? "white" : "black",
+                }}
+                onClick={() => setFilter(obj?.title)}
+              >
+                {obj.title}
+              </button>
+            ))}
           </div>
         </div>
         {isLoading ? (

@@ -1,6 +1,17 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { backendUrl } from "../../constants";
 
-const contactUsForm = () => {
+const ContactUsForm = () => {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setLoading(true);
+    axios.get(backendUrl + "/api/v1/web/contactUs").then((res) => {
+      setData(res.data.data[0]);
+      setLoading(false);
+    });
+  }, []);
   return (
     <div>
       <div class="grid h-auto grid-cols-1  grid-rows-2 gap-4 bg-[#F4F4F4] xl:h-[1022px] xl:grid-cols-12  xl:grid-rows-1">
@@ -21,7 +32,7 @@ const contactUsForm = () => {
               </span>
               <div>
                 <span className="font-poppins text-[12px] font-normal sm:text-[16px] md:text-[22px]">
-                  +92 345 5893337
+                  {data.primaryContact}
                 </span>
               </div>
             </div>
@@ -31,7 +42,7 @@ const contactUsForm = () => {
               </span>
               <div>
                 <span className="font-poppins  text-[12px] font-normal sm:text-[16px] md:text-[22px]">
-                  info@decimalsolutions.com
+                  {data?.primaryEmail}
                 </span>
               </div>
             </div>
@@ -41,8 +52,7 @@ const contactUsForm = () => {
               </span>
               <div>
                 <span className="font-poppins  text-[12px] font-normal sm:text-[16px] md:text-[22px]">
-                  Office No# 17, 2nd Floor, Zaki Centre, I-8 Markaz Islamabad,
-                  44000
+                  {data?.primaryAddress}
                 </span>
               </div>
             </div>
@@ -110,4 +120,4 @@ const contactUsForm = () => {
   );
 };
 
-export default contactUsForm;
+export default ContactUsForm;

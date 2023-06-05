@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook-white.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram-white.svg";
 import { ReactComponent as LinkedInIcon } from "../../assets/icons/linkedin-white.svg";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { backendUrl } from "../../constants";
+import { Loader } from "@mantine/core";
 
 function Footer() {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setLoading(true);
+    axios.get(backendUrl + "/api/v1/web/contactUs").then((res) => {
+      setData(res.data.data[0]);
+      setLoading(false);
+    });
+  }, []);
   return (
     <>
       <footer>
@@ -36,25 +48,29 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div class="footer-div-2">
-              <h2>Contact Us</h2>
-              <span>info@decimalsolutions.com</span>
-              <span>+92 345 5893337</span>
-              <span>
-                Office No# 17, 2nd Floor, Zaki Centre, I-8 Markaz Islamabad,
-                44000
-              </span>
-            </div>
+            {loading ? (
+              <Loader
+                color="white"
+                style={{ display: "flex", margin: "auto" }}
+              />
+            ) : (
+              <div class="footer-div-2">
+                <h2>Contact Us</h2>
+                <span>{data?.primaryEmail}</span>
+                <span>{data?.primaryContact}</span>
+                <span>{data?.primaryAddress}</span>
+              </div>
+            )}
             <div class="footer-div-3">
               <div class="socials-footer">
-                <a href="https://www.facebook.com/">
-                  <FacebookIcon />
+                <a href={data?.facebook}>
+                  <FacebookIcon className="img" />
                 </a>
-                <a href="https://www.instagram.com/">
-                  <InstagramIcon />
+                <a href={data?.instagram}>
+                  <InstagramIcon className="img" />
                 </a>
-                <a href="https://www.linkedin.com/">
-                  <LinkedInIcon />
+                <a href={data?.linkedIn}>
+                  <LinkedInIcon className="img" />
                 </a>
               </div>
               <hr />

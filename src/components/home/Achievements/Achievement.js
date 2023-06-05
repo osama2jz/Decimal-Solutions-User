@@ -11,54 +11,85 @@ import ScrollTrigger from "react-scroll-trigger";
 function Achievement() {
   const [count, setCount] = React.useState(false);
   return (
-    <ScrollTrigger onEnter={()=>setCount(true)} onExit={()=>setCount(false)}>
-    <Wrapper>
-      {/* <!-- Achievements section started--> */}
-      <div class="achievements">
-        <div class="overlay"></div>
-        <div class="content">
-          <div class="heading">
-            <div class="achievements-title">
-              <span class="title"> &lt;&nbsp;Some Facts&nbsp;&gt; </span>
-              <h2 className="font-bold">Number of Achievements</h2>
-            </div>
-          </div>
-          <div class="achievements-boxes">
-            <div class="yearsOps center-achi">
-              <div>
-                <GroupIcon />
+    <ScrollTrigger
+      onEnter={() => setCount(true)}
+      onExit={() => setCount(false)}
+    >
+      <Wrapper>
+        {/* <!-- Achievements section started--> */}
+        <div class="achievements">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="heading">
+              <div class="achievements-title">
+                <span class="title"> &lt;&nbsp;Some Facts&nbsp;&gt; </span>
+                <h2 className="font-bold">Number of Achievements</h2>
               </div>
-                {count && <CountUp start={0} end={8} duration={3} style={{fontSize:'50px'}}/>}
-              <span>Years of operation</span>
             </div>
-            <div class="c-projects center-achi">
-              <div>
-                <PatternIcon />
+            <div class="achievements-boxes">
+              <div class="yearsOps center-achi">
+                <div>
+                  <GroupIcon />
+                </div>
+                {count && (
+                  <CountUp
+                    start={0}
+                    end={8}
+                    duration={3}
+                    style={{ fontSize: "50px", fontWeight: 1000 }}
+                  />
+                )}
+                <span>Years of operation</span>
               </div>
-              <h1>
-                {count && <CountUp start={0} end={112} duration={3} style={{fontSize:'50px'}}/>}
-              </h1>
-              <span>Completed Projects</span>
-            </div>
-            <div class="clients center-achi">
-              <div>
-                <PeopleIcon />
+              <div class="c-projects center-achi">
+                <div>
+                  <PatternIcon />
+                </div>
+                <h1>
+                  {count && (
+                    <CountUp
+                      start={0}
+                      end={112}
+                      duration={3}
+                      style={{ fontSize: "50px", fontWeight: 1000 }}
+                    />
+                  )}
+                </h1>
+                <span>Completed Projects</span>
               </div>
-                {count && <CountUp start={0} end={57} duration={3} style={{fontSize:'50px'}}/>}
-              <span>Loyal Clients</span>
-            </div>
-            <div class="projects center-achi">
-              <div>
-                <LaptopIcon />
+              <div class="clients center-achi">
+                <div>
+                  <PeopleIcon />
+                </div>
+                {count && (
+                  <CountUp
+                    start={0}
+                    end={57}
+                    duration={3}
+                    style={{ fontSize: "50px", fontWeight: 1000 }}
+                  />
+                )}
+                <span>Loyal Clients</span>
               </div>
-                {count && <CountUp start={0} end={7} duration={3} style={{fontSize:'50px'}} />}
-              <span>New Projects</span>
+              <div class="projects center-achi">
+                <div>
+                  <LaptopIcon />
+                </div>
+                {count && (
+                  <CountUp
+                    start={0}
+                    end={7}
+                    duration={3}
+                    style={{ fontSize: "50px", fontWeight: 1000 }}
+                  />
+                )}
+                <span>New Projects</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* <!-- Achievements section ended --> */}
-    </Wrapper>
+        {/* <!-- Achievements section ended --> */}
+      </Wrapper>
     </ScrollTrigger>
   );
 }
