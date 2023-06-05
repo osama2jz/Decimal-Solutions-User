@@ -37,7 +37,8 @@ h2{
     position: relative;
   }
   img {
-    width: 60%;
+    width: 50%;
+    margin-left:120px
   }
   .description-container {
     background-color: white;
@@ -47,7 +48,7 @@ h2{
     border: 1px solid rgb(0,0,0,0.2);
     box-shadow: 15px 12px 20px rgba(0, 0, 0, 0.06);
     width: 40%;
-    font-size: 1em;
+    font-size: 1.5em;
   }
   p {
     color: #3f3f3f;
@@ -58,24 +59,24 @@ h2{
     margin-bottom: 0.5rem;
   }
   p {
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
   .description-1 {
-    top: 7.5%;
+    top: 5%;
     right: 5%;
   }
   .description-2 {
-    top: 28.2%;
-    right: 0.9%;
+    top: 25%;
+    right: 1.3%;
   }
   .description-3 {
-    top: 54%;
-    right: 0.7%;
+    top: 46%;
+    right: 1.7%;
   }
   .description-4 {
     /* bottom: 0%; */
-    right: 6.5%;
-    top: 77.7%
+    right: 6%;
+    top: 67%
   }
   @media screen and (max-width: 1200px) {
      .img-container {

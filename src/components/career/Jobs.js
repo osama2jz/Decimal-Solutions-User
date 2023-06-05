@@ -9,12 +9,12 @@ const JobPosting = ({ jobData }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full flex-1 aspect-[1.4] flex flex-col items-center justify-center gap-[10px] rounded-[24px] border-2 border-boxColor md:py-[30px]">
+    <div className="w-full flex-1 aspect-[1.4] overflow-hidden flex flex-col items-center justify-center gap-[10px] rounded-[24px] border-2 border-boxColor md:py-[30px]">
       <h1 className="font-semibold sm:text-[30px] md:mt-0 sm:py-3">
         {jobData?.title}
       </h1>
-      <p className="2xl:text-[24px]">Type: {jobData?.category?.title}</p>
-      <p className="2xl:text-[24px]">Vacancy: {jobData?.vacancies}</p>
+      <p className="2xl:text-[16px] whitespace-nowrap">{jobData?.category?.title}</p>
+      <p className="2xl:text-[16px] overflow-hidden">Vacancy: {jobData?.vacancies}</p>
       <button
         className="bg-accentColor rounded-full text-white font-poppins font-semibold px-[52px] py-[10px]"
         onClick={() =>
@@ -50,7 +50,7 @@ const Jobs = ({ title, type, seats }) => {
           </div>
         </div>
 
-        <div className="select-div">
+        {/* <div className="select-div">
           <Select
             data={["Develpoment", "Designing", "Marketing", "Sales"]}
             placeholder="Category"
@@ -73,7 +73,7 @@ const Jobs = ({ title, type, seats }) => {
           <button className="bg-white rounded-lg text-accentColor font-poppins font-semibold px-[52px] py-[10px] hover:opacity-90">
             Filter
           </button>
-        </div>
+        </div> */}
       </div>
 
       {isLoading ? (

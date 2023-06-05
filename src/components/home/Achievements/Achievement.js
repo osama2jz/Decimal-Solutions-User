@@ -34,9 +34,9 @@ function Achievement() {
                 {count && (
                   <CountUp
                     start={0}
-                    end={8}
+                    end={10}
                     duration={3}
-                    style={{ fontSize: "50px", fontWeight: 1000 }}
+                    style={{ fontSize: "60px", fontWeight: 1000 }}
                   />
                 )}
                 <span>Years of operation</span>
@@ -51,7 +51,7 @@ function Achievement() {
                       start={0}
                       end={112}
                       duration={3}
-                      style={{ fontSize: "50px", fontWeight: 1000 }}
+                      style={{ fontSize: "60px", fontWeight: 1000 }}
                     />
                   )}
                 </h1>
@@ -64,9 +64,9 @@ function Achievement() {
                 {count && (
                   <CountUp
                     start={0}
-                    end={57}
+                    end={55}
                     duration={3}
-                    style={{ fontSize: "50px", fontWeight: 1000 }}
+                    style={{ fontSize: "60px", fontWeight: 1000 }}
                   />
                 )}
                 <span>Loyal Clients</span>
@@ -80,7 +80,7 @@ function Achievement() {
                     start={0}
                     end={7}
                     duration={3}
-                    style={{ fontSize: "50px", fontWeight: 1000 }}
+                    style={{ fontSize: "60px", fontWeight: 1000 }}
                   />
                 )}
                 <span>New Projects</span>

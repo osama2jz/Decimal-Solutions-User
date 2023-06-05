@@ -24,30 +24,30 @@ const Card = (props) => {
           <div className="bg-[#A4238C]  absolute bottom-0 flex justify-center items-center p-5 text-white opacity-80">
             <div className="border-t-4">
               <h1 className="text-6xl font-bold flex justify-start h-full items-end  ">
-                {props.date.split(" ")[0]}
+                {props?.date?.split(" ")[0]}
               </h1>
             </div>
             <div className="px-2">
               <h1 className="text-2xl flex justify-start h-full items-end">
-                {props.date.split(" ")[1]}
+                {props?.date?.split(" ")[1]}
               </h1>
               <h1 className="text-2xl flex justify-start h-full items-end">
-                {props.date.split(" ")[2]}
+                {props?.date?.split(" ")[2]}
               </h1>
             </div>
           </div>
           <div className="absolute bottom-0 flex justify-center items-center p-5 text-white ">
             <div className="border-t-4">
               <h1 className="text-6xl font-bold flex justify-start h-full items-end  ">
-                {props.date.split(" ")[0]}
+                {props?.date?.split(" ")[0]}
               </h1>
             </div>
             <div className="px-2">
               <h1 className="text-2xl flex justify-start h-full items-end">
-                {props.date.split(" ")[1]}
+                {props?.date?.split(" ")[1]}
               </h1>
               <h1 className="text-2xl flex justify-start h-full items-end">
-                {props.date.split(" ")[2]}
+                {props?.date?.split(" ")[2]}
               </h1>
             </div>
           </div>
