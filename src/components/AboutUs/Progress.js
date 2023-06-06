@@ -5,36 +5,23 @@ const Progress = () => {
     <div className="flex md:flex-row flex-col space-y-5 justify-evenly items-center bg-slate-50 p-8 mt-16">
       <div className="flex flex-col">
         <RingProgress
-          sections={[{ value: 40, color: "#A4238C" }]}
+          sections={[{ value: 100, color: "#A4238C" }]}
           label={
             <Text color="#A4238C" weight={700} align="center" size="xl">
-              40%
+              100%
             </Text>
           }
         />
         <p className="w-[120px] text-center font-poppins">
-          Mobile App Developement
+          Website Developement
         </p>
       </div>
       <div className="flex flex-col">
         <RingProgress
-          sections={[{ value: 50, color: "#A4238C" }]}
+          sections={[{ value: 85, color: "#A4238C" }]}
           label={
             <Text color="#A4238C" weight={700} align="center" size="xl">
-              50%
-            </Text>
-          }
-        />
-        <p className="w-[120px] text-center font-poppins">
-          Mobile App Developement
-        </p>
-      </div>
-      <div className="flex flex-col">
-        <RingProgress
-          sections={[{ value: 60, color: "#A4238C" }]}
-          label={
-            <Text color="#A4238C" weight={700} align="center" size="xl">
-              60%
+              85%
             </Text>
           }
         />
@@ -52,20 +39,46 @@ const Progress = () => {
           }
         />
         <p className="w-[120px] text-center font-poppins">
-          Mobile App Developement
+          AR/VR Games
         </p>
       </div>
       <div className="flex flex-col">
         <RingProgress
-          sections={[{ value: 80, color: "#A4238C" }]}
+          sections={[{ value: 75, color: "#A4238C" }]}
           label={
             <Text color="#A4238C" weight={700} align="center" size="xl">
-              80%
+              75%
             </Text>
           }
         />
         <p className="w-[120px] text-center font-poppins">
-          Mobile App Developement
+          UI/UX Design
+        </p>
+      </div>
+      <div className="flex flex-col">
+        <RingProgress
+          sections={[{ value: 85, color: "#A4238C" }]}
+          label={
+            <Text color="#A4238C" weight={700} align="center" size="xl">
+              85%
+            </Text>
+          }
+        />
+        <p className="w-[120px] text-center font-poppins">
+          Digital Marketing
+        </p>
+      </div>
+      <div className="flex flex-col">
+        <RingProgress
+          sections={[{ value: 90, color: "#A4238C" }]}
+          label={
+            <Text color="#A4238C" weight={700} align="center" size="xl">
+              90%
+            </Text>
+          }
+        />
+        <p className="w-[120px] text-center font-poppins">
+          ERP
         </p>
       </div>
     </div>

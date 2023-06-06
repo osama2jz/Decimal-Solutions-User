@@ -93,7 +93,7 @@ const AllProjects = () => {
   const [porfolioData, setPorfolioData] = React.useState([]);
   const [filteredData, setFilteredData] = React.useState([]);
   const [services, setServices] = React.useState([]);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(true);
@@ -186,11 +186,14 @@ const AllProjects = () => {
                               style={{
                                 marginRight: "6rem",
                               }}
-                              onClick={()=>navigate("/project-detail",
-                              {
-                                state:{projectData:card, category:portfolio?.category
-                                }
-                              })}
+                              onClick={() =>
+                                navigate("/project-detail", {
+                                  state: {
+                                    projectData: card,
+                                    category: portfolio?.category,
+                                  },
+                                })
+                              }
                             >
                               <div class="card__inner">
                                 <div class="card__image">
@@ -204,7 +207,11 @@ const AllProjects = () => {
                                 <h3>{card?.title}</h3>
                                 <p>{card?.description}</p>
 
-                                <a href={card?.link} class="link__icon">
+                                <a
+                                  href={card?.link}
+                                  target="_blank"
+                                  class="link__icon"
+                                >
                                   <LinkIcon />
                                 </a>
                               </div>

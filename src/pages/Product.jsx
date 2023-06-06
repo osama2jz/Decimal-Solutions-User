@@ -39,6 +39,7 @@ function Product() {
                   reverse={index % 2 === 0 ? false : true}
                   heading={product.title}
                   image={product.coverImage}
+                  link={product?.link}
                   style={{ backgroundImage: "red" }}
                 >
                   {product.description}

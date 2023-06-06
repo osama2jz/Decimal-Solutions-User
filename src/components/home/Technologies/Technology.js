@@ -16,6 +16,9 @@ import python from "../../../assets/images/Tools-and-Tech/python.png";
 import django from "../../../assets/images/Tools-and-Tech/djnago.png";
 import java from "../../../assets/images/Tools-and-Tech/java.png";
 import cplusplus from "../../../assets/images/Tools-and-Tech/cplusplus.png";
+import chash from "../../../assets/images/Tools-and-Tech/chash.png";
+import wordpress from "../../../assets/images/Tools-and-Tech/wordpress.png";
+import sel from "../../../assets/images/Tools-and-Tech/sel.jpg";
 import Wrapper from "./TechnologyWrapper";
 import Slider from "react-slick";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
@@ -136,7 +139,11 @@ function Technology() {
             <img src={react} alt="React.js Logo" style={{ width: "20rem" }} />
           </div>
           <div class="entry" style={{ border: "1px solid black" }}>
-            <img src={reactNative} alt="React.js Logo" style={{ width: "20rem" }} />
+            <img
+              src={reactNative}
+              alt="React.js Logo"
+              style={{ width: "20rem" }}
+            />
           </div>
           <div class="entry">
             <img src={node} alt="Node.js Logo" style={{ width: "20rem" }} />
@@ -198,6 +205,15 @@ function Technology() {
           </div>
           <div class="entry">
             <img src={cplusplus} alt="C++ Logo" style={{ width: "20rem" }} />
+          </div>
+          <div class="entry">
+            <img src={chash} alt="C++ Logo" style={{ width: "10rem" }} />
+          </div>
+          <div class="entry">
+            <img src={wordpress} alt="wordpress Logo" style={{ width: "20rem" }} />
+          </div>
+          <div class="entry">
+            <img src={sel} alt="selenium Logo" style={{ width: "10rem" }} />
           </div>
         </Slider>
       </div>

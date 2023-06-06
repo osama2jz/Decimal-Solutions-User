@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { ReactComponent as PlaneIcon } from "../../../assets/icons/plane.svg";
-import Banner1 from "../../../assets/images/new-banner-1.jpeg";
-import Banner2 from "../../../assets/images/new-banner-2.jpeg";
-import Banner3 from "../../../assets/images/new-banner-3.jpeg";
-import Banner4 from "../../../assets/images/new-banner-4.jpeg";
-import Carousel from "react-bootstrap/Carousel";
-import Wrapper from "./SliderImagesWrapper";
-import Slider from "react-slick";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import Banner1 from "../../../assets/images/new-banner-1.jpeg";
 import { backendUrl } from "../../../constants";
-import { Loader } from "@mantine/core";
+import Wrapper from "./SliderImagesWrapper";
 
 function SliderImages() {
   const [isLoading, setIsLoading] = useState(false);
@@ -52,7 +46,7 @@ function SliderImages() {
             </div>
           </div> */}
           {images?.map((obj) => (
-            <div class="img-slider-header">
+            <div class="img-slider-headerr">
               <div class="slide active">
                 <img src={obj} alt="People working in an office" />
               </div>

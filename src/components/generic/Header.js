@@ -47,13 +47,13 @@ function Header() {
 
             <div className="socials">
               <div className="social-media-platforms">
-                <a href={data?.facebook}>
+                <a href={data?.facebook} target="_blank">
                   <FacebookIcon className="img" />
                 </a>
-                <a href={data?.instagram}>
+                <a href={data?.instagram0 } target="_blank">
                   <InstagramIcon className="img" />
                 </a>
-                <a href={data?.linkedIn}>
+                <a href={data?.linkedIn} target="_blank">
                   <LinkedInIcon className="img" />
                 </a>
               </div>

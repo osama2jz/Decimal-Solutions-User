@@ -63,13 +63,13 @@ function Footer() {
             )}
             <div class="footer-div-3">
               <div class="socials-footer">
-                <a href={data?.facebook}>
+                <a href={data?.facebook} target="_blank">
                   <FacebookIcon className="img" />
                 </a>
-                <a href={data?.instagram}>
+                <a href={data?.instagram} target="_blank">
                   <InstagramIcon className="img" />
                 </a>
-                <a href={data?.linkedIn}>
+                <a href={data?.linkedIn} target="_blank">
                   <LinkedInIcon className="img" />
                 </a>
               </div>
