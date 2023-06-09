@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-.projects-container .heading {
+  .projects-container .heading {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +83,10 @@ const Wrapper = styled.section`
     cursor: pointer;
     color: #666666;
     font-weight: 400;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
+    "&:hover": {
+      color: black !important;
+    }
   }
   @media all and (max-width: 1600px) {
     .projects-container .project-tags button {
@@ -119,8 +122,10 @@ const Wrapper = styled.section`
     padding: 8px 40px;
   }
   .projects-container .project-tags button:hover {
-    color: white !important;
+    // color: purple !important;
     background-color: #b071b0;
+    font-weight:500;
+    box-shadow:1px 1px 10px 2px purple;
     border: 1px solid #a4238c;
   }
   .projects-container .project-view-button {
@@ -166,16 +171,12 @@ const Wrapper = styled.section`
     }
   }
 
-
-
-
-
   .carousel__slide:hover .hover__overlay {
     visibility: visible !important;
     opacity: 0.9 !important;
   }
   @media screen and (min-width: 1180px) {
-     .carousel__slide {
+    .carousel__slide {
       min-width: 33.33%;
       scroll-snap-align: center;
       position: relative;
@@ -193,12 +194,12 @@ const Wrapper = styled.section`
       min-width: 100%;
     }
   }
-   .carousel__slide .card {
+  .carousel__slide .card {
     width: 100%;
     aspect-ratio: 3/2;
     border: 1px solid transparent;
   }
-   .carousel__slide .card .card__inner {
+  .carousel__slide .card .card__inner {
     box-shadow: #b071b0 0px 0px 0px 3px;
     display: flex;
     align-items: center;
@@ -216,11 +217,11 @@ const Wrapper = styled.section`
     right: 0;
     overflow: hidden;
   }
-   .carousel__slide .card .card__inner .card__image img {
+  .carousel__slide .card .card__inner .card__image img {
     width: 100%;
-  height: 100%;
+    height: 100%;
   }
-   .carousel__slide .card .card__inner h3 {
+  .carousel__slide .card .card__inner h3 {
     font-size: 1.8rem;
     margin: 0;
     font-weight: 500;
@@ -263,40 +264,36 @@ const Wrapper = styled.section`
     opacity: 0;
     transition: visibility 0.3s linear, opacity 0.3s linear;
   }
-   .carousel__slide .card .hover__overlay h3 {
+  .carousel__slide .card .hover__overlay h3 {
     font-size: 2rem;
     color: white;
     text-transform: uppercase;
   }
-   .carousel__slide .card .hover__overlay p {
+  .carousel__slide .card .hover__overlay p {
     font-size: 1.2rem;
     text-align: center;
     color: white;
   }
-   .carousel__slide .card .hover__overlay .link__icon {
+  .carousel__slide .card .hover__overlay .link__icon {
     margin-top: 2rem;
   }
   @media screen and (max-width: 377px) {
-  .hover__overlay p {
-    font-size: 0.4rem;
-    text-align: center;
-    color: white;
-  }
-  .hover__overlay .link__icon {
-    margin-top: 0.5rem;
-  }
+    .hover__overlay p {
+      font-size: 0.4rem;
+      text-align: center;
+      color: white;
+    }
+    .hover__overlay .link__icon {
+      margin-top: 0.5rem;
+    }
   }
   @media screen and (max-width: 400px) {
     .hover__overlay p {
-    font-size: 1rem;
-    text-align: center;
-    color: white;
+      font-size: 1rem;
+      text-align: center;
+      color: white;
+    }
   }
-  }
- 
- 
- 
-
 `;
 
 export default Wrapper;

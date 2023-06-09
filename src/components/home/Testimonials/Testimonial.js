@@ -26,7 +26,9 @@ function Technology() {
   return (
     <Wrapper>
       <div style={{ marginTop: "5rem", marginBottom: "5rem" }}>
-        {!test.length ? <Loader /> :  (
+        {!test.length ? (
+          <Loader m="auto" color="purple" />
+        ) : (
           <Slider {...settings} className="slider">
             {test.map((obj) => (
               <div class="slider__contents">

@@ -56,7 +56,7 @@ const Card = (props) => {
             </div>
           </div>
         </div>
-        <h2 className="text-[25px] font-bold mt-8 xs:w-[440px]   md:w-[501px] ">
+        <h2 className="text-[25px] font-bold mt-8 xs:w-[440px] md:w-[90%] text-center">
           {props.title}
         </h2>
         {/* <h1 className="text-[20px] my-4  text-justify ">{props.description}</h1> */}

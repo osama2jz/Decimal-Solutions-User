@@ -15,12 +15,14 @@ import Projects from "./pages/Projects";
 import Products from "./pages/Product";
 import { Viewjob } from "./pages/Viewjob";
 import { Applyjob } from "./pages/Apply";
-import ProductDetail from "./pages/ProjectDetail"
+import ProductDetail from "./pages/ProjectDetail";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <Router>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/our-services" element={<OurServices />} />
@@ -34,8 +36,9 @@ function App() {
         <Route path="/portfolio" element={<Projects />} />
         <Route path="/products" element={<Products />} />
         <Route path="/apply-job/:id" element={<Applyjob />} />
-        <Route path ="/project-detail" element={<ProductDetail/>}/>
+        <Route path="/project-detail" element={<ProductDetail />} />
       </Routes>
+      {/* </ScrollToTop> */}
       <Footer />
     </Router>
   );

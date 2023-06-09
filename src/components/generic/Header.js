@@ -31,7 +31,7 @@ function Header() {
     <>
       <header>
         {loading ? (
-          <Loader color="purple" style={{display:'flex',margin:'auto'}}/>
+          <Loader color="purple" style={{ display: "flex", margin: "auto" }} />
         ) : (
           <div className="contact-details">
             <div className="phone">
@@ -50,7 +50,7 @@ function Header() {
                 <a href={data?.facebook} target="_blank">
                   <FacebookIcon className="img" />
                 </a>
-                <a href={data?.instagram0 } target="_blank">
+                <a href={data?.instagram} target="_blank">
                   <InstagramIcon className="img" />
                 </a>
                 <a href={data?.linkedIn} target="_blank">
