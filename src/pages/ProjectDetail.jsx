@@ -9,6 +9,7 @@ import axios from "axios";
 import { Loader, Title } from "@mantine/core";
 import { useLocation, useNavigate } from "react-router-dom";
 import ExternalLink from "../assets/icons/external-link.png";
+import moment from "moment";
 
 const ProductDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -51,14 +52,11 @@ const ProductDetail = () => {
                       Date
                     </text>
                     {" : "}
-                    <text className="text-gray-500 text-lg">22-2-2023</text>
-                  </div>
-                  <div>
-                    <text className="font-bold text-lg text-textColor">
-                      Client
+                    <text className="text-gray-500 text-lg">
+                      {moment(
+                        projectData?.completedAt || projectData?.createdAt
+                      ).format("dd MMMM YYYY")}
                     </text>
-                    {" : "}
-                    <text className="text-gray-500 text-lg">22-2-2023</text>
                   </div>
                   <div>
                     <text className="font-bold text-lg text-textColor">
@@ -83,7 +81,7 @@ const ProductDetail = () => {
           </div>
           <div>
             <button
-              onClick={() => (window.open(projectData?.link, '_blank'))}
+              onClick={() => window.open(projectData?.link, "_blank")}
               class="bg-white border border-borderColor border-opacity-50 rounded-sm px-4 py-2 flex items-center project-Detail-button"
             >
               <img

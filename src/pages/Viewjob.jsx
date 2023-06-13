@@ -1,6 +1,7 @@
 import React from "react";
 import HiringProcess from "../components/career/HiringProcess";
 import { useLocation, useNavigate } from "react-router-dom";
+import moment from "moment/moment";
 
 export const Viewjob = () => {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ export const Viewjob = () => {
               <text className="font-bold text-lg">Experience Level</text>
               {" : "}
               <text className="text-gray-500 text-lg">
-                {jobData?.experienceLevel}
+                {jobData?.jobLevel}
               </text>
             </div>
             <div>
@@ -67,7 +68,7 @@ export const Viewjob = () => {
               <text className="font-bold text-lg">Application Deadline</text>
               {" : "}
               <text className="text-gray-500 text-lg">
-                {jobData?.jobApplictionDeadline}
+                {moment(jobData?.jobApplicationDeadline).format("DD MMMM YYYY")}
               </text>
             </div>
             <div>
