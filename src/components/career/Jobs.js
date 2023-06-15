@@ -85,7 +85,7 @@ const Jobs = ({ title, type, seats }) => {
       ) : (
         <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-20 w-[80%] m-auto my-20">
           {jobs.length ? (
-            jobs.map((job) => <JobPosting jobData={job} />)
+            jobs.map((job, index) => <JobPosting jobData={job} key={index} />)
           ) : (
             <Title>No Job Available</Title>
           )}

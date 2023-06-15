@@ -139,8 +139,8 @@ function Services() {
       >
         <Slider {...settings}>
           {projectData.length ? (
-            projectData.map((obj) => (
-              <div className="carousel__slide">
+            projectData.map((obj,index) => (
+              <div className="carousel__slide" key={index}>
                 <div
                   className="card"
                   style={{

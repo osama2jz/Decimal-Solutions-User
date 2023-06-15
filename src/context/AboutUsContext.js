@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { backendUrl } from "../constants";
 
-export const UserContext = createContext({});
+export const AboutUsContext = createContext({});
 const AboutUsProvider = (props) => {
   const [aboutUs, setAboutUs] = useState(
     JSON.parse(localStorage.getItem("aboutUs"))?.userType
@@ -31,7 +31,7 @@ const AboutUsProvider = (props) => {
     setAboutUs,
   };
   return (
-    <UserContext.Provider value={values}>{props.children}</UserContext.Provider>
+    <AboutUsContext.Provider value={values}>{props.children}</AboutUsContext.Provider>
   );
 };
 

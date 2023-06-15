@@ -146,6 +146,7 @@ const AllProjects = () => {
             </button>
             {services.map((obj, ind) => (
               <button
+                key={ind}
                 style={{
                   backgroundColor: filter === obj?.title ? "purple" : "white",
                   color: filter === obj?.title ? "white" : "black",
@@ -180,7 +181,7 @@ const AllProjects = () => {
                     <Slider {...settings}>
                       {portfolio?.projects?.map((card, index) => {
                         return (
-                          <div className="carousel__slide mb-10">
+                          <div className="carousel__slide mb-10" key={index}>
                             <div
                               className="card"
                               style={{

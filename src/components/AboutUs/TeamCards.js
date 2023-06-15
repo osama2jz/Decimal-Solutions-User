@@ -24,8 +24,8 @@ const TeamCards = (props) => {
           style={{ margin: "auto", marginBlock: "100px" }}
         />
       ) : profileCards.length ? (
-        profileCards.map((item) => (
-          <div className="flex items-center justify-center text-black my-5">
+        profileCards.map((item, index) => (
+          <div className="flex items-center justify-center text-black my-5" key={index}>
             <div className="flex flex-col gap-4">
               <img
                 alt="user"

@@ -34,6 +34,7 @@ function Product() {
               return (
                 <RowLayout
                   withBgColor
+                  key={index}
                   withButton
                   border
                   reverse={index % 2 === 0 ? false : true}

@@ -77,6 +77,7 @@ export default function OurServices() {
             services.map((service, index) => {
               return (
                 <RowLayout
+                  key={index}
                   border
                   reverse={index % 2 === 0 ? false : true}
                   heading={service.title}

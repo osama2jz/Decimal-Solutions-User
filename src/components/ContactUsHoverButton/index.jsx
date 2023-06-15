@@ -12,8 +12,11 @@ import {
 import { BsFacebook, BsMessenger, BsWhatsapp } from "react-icons/bs";
 import { BrandFacebook } from "tabler-icons-react";
 import { AiOutlineFacebook, AiOutlineWhatsApp } from "react-icons/ai";
+import { useContext } from "react";
+import { AboutUsContext } from "../../context/AboutUsContext";
 
 const ContactUsHoverButton = () => {
+  const { aboutUs } = useContext(AboutUsContext);
   const handleNavigate = (link) => {
     window.open(link, "_blank");
     // window.open("https://web.whatsapp.com/send?phone=+923455893337&text=Hey Decimal Solutions!", "_blank");
@@ -64,7 +67,12 @@ const ContactUsHoverButton = () => {
               style={{ cursor: "pointer" }}
               noWrap
               onClick={() => {
-                handleNavigate("https://m.me/100093707136830");
+                const regexToReplace = /https:\/\/www.facebook.com\//g;
+                handleNavigate(
+                  `https://m.me/${(
+                    aboutUs?.facebook || "100093707136830"
+                  ).replaceAll(regexToReplace, "")}`
+                );
               }}
             >
               <BsMessenger color="blue" />{" "}
@@ -75,7 +83,13 @@ const ContactUsHoverButton = () => {
               style={{ cursor: "pointer" }}
               noWrap
               onClick={() => {
-                handleNavigate("https://wa.me/+923455893337");
+                const regexToReplace = /\s|-/g;
+                handleNavigate(
+                  `https://wa.me/${"+92-345-5893337".replaceAll(
+                    regexToReplace,
+                    ""
+                  )}`
+                );
               }}
             >
               <BsWhatsapp color="green" /> <Text>Whatsapp</Text>

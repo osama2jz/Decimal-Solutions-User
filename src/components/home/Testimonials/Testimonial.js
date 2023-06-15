@@ -30,8 +30,8 @@ function Technology() {
           <Loader m="auto" color="purple" />
         ) : (
           <Slider {...settings} className="slider">
-            {test.map((obj) => (
-              <div className="slider__contents">
+            {test.map((obj,index) => (
+              <div className="slider__contents" key={index}>
                 <div
                   style={{
                     display: "flex",
