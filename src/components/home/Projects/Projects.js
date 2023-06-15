@@ -100,13 +100,13 @@ function Services() {
   return (
     <Wrapper>
       <div className="projects-container">
-        <div class="heading">
-          <div class="project-titles">
-            <span class="title"> &lt;&nbsp;OUR PROJECTS&nbsp;&gt; </span>
+        <div className="heading">
+          <div className="project-titles">
+            <span className="title"> &lt;&nbsp;OUR PROJECTS&nbsp;&gt; </span>
             <h2>Some Latest Client Projects</h2>
           </div>
         </div>
-        {/* <div class="project-tags">
+        {/* <div className="project-tags">
           <button
             style={{
               backgroundColor: filter === "all" ? "purple" : "white",
@@ -140,23 +140,23 @@ function Services() {
         <Slider {...settings}>
           {projectData.length ? (
             projectData.map((obj) => (
-              <div class="carousel__slide">
+              <div className="carousel__slide">
                 <div
-                  class="card"
+                  className="card"
                   style={{
                     marginRight: "3rem",
                   }}
                 >
-                  <div class="card__inner">
-                    <div class="card__image">
+                  <div className="card__inner">
+                    <div className="card__image">
                       <img src={obj?.coverImage} alt="Kaiya Screenshot" />
                     </div>
                   </div>
-                  <div class="hover__overlay">
+                  <div className="hover__overlay">
                     <h3>{obj?.title}</h3>
                     <p>{obj?.shortDescription}</p>
 
-                    <a href="/view-projects" class="link__icon">
+                    <a href="/view-projects" className="link__icon">
                       <LinkIcon />
                     </a>
                   </div>

@@ -22,9 +22,9 @@ export const Viewjob = () => {
       </div>
       <HiringProcess />
       <div className="view-Jobs-content">
-        <div class="portfolio-heading">
-          <div class="portfolio-title">
-            <span class="por-title">
+        <div className="portfolio-heading">
+          <div className="portfolio-title">
+            <span className="por-title">
               {" "}
               &lt;&nbsp;USQUARE SOLUTIONS&nbsp;&gt;{" "}
             </span>

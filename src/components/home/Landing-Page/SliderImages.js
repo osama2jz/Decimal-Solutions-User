@@ -28,15 +28,15 @@ function SliderImages() {
     <Wrapper>
       <div>
         <Slider {...settings}>
-          {/* <div class="img-slider-header">
-            <div class="slide active">
+          {/* <div className="img-slider-header">
+            <div className="slide active">
               <img src={Banner1} alt="People working in an office" />
-              <div class="content">
-                <div class="diagonals">
-                  <div class="diagonal thick"></div>
-                  <div class="diagonal thin"></div>
+              <div className="content">
+                <div className="diagonals">
+                  <div className="diagonal thick"></div>
+                  <div className="diagonal thin"></div>
                 </div>
-                <div class="text">
+                <div className="text">
                   <h1>
                     Welcome to <br />
                     Decimal Solutions...
@@ -45,22 +45,22 @@ function SliderImages() {
               </div>
             </div>
           </div> */}
-          {images?.map((obj) => (
-            <div class="img-slider-headerr">
-              <div class="slide active">
+          {images?.map((obj, index) => (
+            <div className="img-slider-headerr" key={index}>
+              <div className="slide active">
                 <img src={obj} alt="People working in an office" />
               </div>
             </div>
           ))}
-          {/*<div class="img-slider-header">
-            <div class="slide active">
+          {/*<div className="img-slider-header">
+            <div className="slide active">
               <img src={Banner4} alt="People working in an office" />
-              <div class="content">
-                <div class="diagonals">
-                  <div class="diagonal thick"></div>
-                  <div class="diagonal thin"></div>
+              <div className="content">
+                <div className="diagonals">
+                  <div className="diagonal thick"></div>
+                  <div className="diagonal thin"></div>
                 </div>
-                <div class="text">
+                <div className="text">
                   <h1>
                     Web Application <br />
                     Development By <br/>
@@ -70,15 +70,15 @@ function SliderImages() {
               </div>
             </div>
           </div>
-          <div class="img-slider-header">
-            <div class="slide active">
+          <div className="img-slider-header">
+            <div className="slide active">
               <img src={Banner4} alt="People working in an office" />
-              <div class="content">
-                <div class="diagonals">
-                  <div class="diagonal thick"></div>
-                  <div class="diagonal thin"></div>
+              <div className="content">
+                <div className="diagonals">
+                  <div className="diagonal thick"></div>
+                  <div className="diagonal thin"></div>
                 </div>
-                <div class="text">
+                <div className="text">
                   <h1>
                     Best ERP Solutions <br />
                     For Online Business

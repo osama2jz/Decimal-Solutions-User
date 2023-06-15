@@ -14,7 +14,7 @@ const ContactUsForm = () => {
   }, []);
   return (
     <div>
-      <div class="grid h-auto grid-cols-1  grid-rows-2 gap-4 bg-[#F4F4F4] xl:h-[1022px] xl:grid-cols-12  xl:grid-rows-1">
+      <div className="grid h-auto grid-cols-1  grid-rows-2 gap-4 bg-[#F4F4F4] xl:h-[1022px] xl:grid-cols-12  xl:grid-rows-1">
         <div className="  relative flex items-center p-10 px-2.5 md:px-5 xl:col-span-5 xl:col-start-1">
           <div className=" absolute right-[-20px] top-auto bottom-auto my-auto hidden h-[799px]   w-[49.01px] bg-accentColor xl:block"></div>
           <div>
@@ -71,39 +71,39 @@ const ContactUsForm = () => {
                   </h1>
                 </div>
               </div>
-              <div class="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
-                  <div class="relative">
+                  <div className="relative">
                     <input
                       placeholder="Full Name"
                       type="text"
-                      class="h:45 font-poppins mt-2 block w-full rounded-[5px] border border-gray-500 bg-white py-2  pl-8 text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-0 focus:ring-blue-300 focus:ring-opacity-40 md:h-[65] md:px-4 lg:h-[85px] xl:mt-2 xl:px-4 xl:py-2 xl:pl-8"
+                      className="h:45 font-poppins mt-2 block w-full rounded-[5px] border border-gray-500 bg-white py-2  pl-8 text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-0 focus:ring-blue-300 focus:ring-opacity-40 md:h-[65] md:px-4 lg:h-[85px] xl:mt-2 xl:px-4 xl:py-2 xl:pl-8"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <div class="relative">
+                  <div className="relative">
                     <input
                       placeholder="Enter Email Address"
                       type="email"
-                      class="h:45 font-poppins mt-2  block w-full rounded-[5px] border border-gray-500 bg-white px-4  py-2 pl-8 text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-0 focus:ring-blue-300 focus:ring-opacity-40 md:h-[65] lg:h-[85px] xl:mt-2 xl:px-4 xl:py-2 xl:pl-8"
+                      className="h:45 font-poppins mt-2  block w-full rounded-[5px] border border-gray-500 bg-white px-4  py-2 pl-8 text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-0 focus:ring-blue-300 focus:ring-opacity-40 md:h-[65] lg:h-[85px] xl:mt-2 xl:px-4 xl:py-2 xl:pl-8"
                     />
                   </div>
                 </div>
               </div>
 
-              <div class="relative">
+              <div className="relative">
                 <input
                   placeholder="Interested In"
                   type="text"
-                  class="h:45 font-poppins block  w-full rounded-[5px] border border-gray-500 bg-white py-2 pl-8  text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-0 focus:ring-blue-300 focus:ring-opacity-40 md:mt-2 md:h-[65] md:px-4 lg:h-[85px] xl:mt-2 xl:px-4 xl:py-2 xl:pl-8 "
+                  className="h:45 font-poppins block  w-full rounded-[5px] border border-gray-500 bg-white py-2 pl-8  text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-0 focus:ring-blue-300 focus:ring-opacity-40 md:mt-2 md:h-[65] md:px-4 lg:h-[85px] xl:mt-2 xl:px-4 xl:py-2 xl:pl-8 "
                 />
               </div>
-              <div class="relative">
+              <div className="relative">
                 <textarea
                   placeholder="Write Your Message"
-                  class="h:75 font-poppins block  w-full resize-none rounded-[5px] border  border-gray-500 bg-white    pt-8  pl-8 text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-0 focus:ring-blue-300 focus:ring-opacity-40 md:mt-2 md:h-[95] lg:h-[125px] xl:mt-2 xl:px-8 xl:py-8 xl:pl-8"
+                  className="h:75 font-poppins block  w-full resize-none rounded-[5px] border  border-gray-500 bg-white    pt-8  pl-8 text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-0 focus:ring-blue-300 focus:ring-opacity-40 md:mt-2 md:h-[95] lg:h-[125px] xl:mt-2 xl:px-8 xl:py-8 xl:pl-8"
                 ></textarea>
               </div>
               <div className="relative ">

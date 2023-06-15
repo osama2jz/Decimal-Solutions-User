@@ -134,7 +134,7 @@ const AllProjects = () => {
           </h1>
         </div>
         <div className="projects-container">
-          <div class="project-tags">
+          <div className="project-tags">
             <button
               style={{
                 backgroundColor: filter === "all" ? "purple" : "white",
@@ -169,9 +169,9 @@ const AllProjects = () => {
               filteredData?.map((portfolio, index) => {
                 return (
                   <div className="container mx-auto px-10 mt-10" key={index}>
-                    <div class="portfolio-heading">
-                      <div class="portfolio-title">
-                        <span class="por-title">
+                    <div className="portfolio-heading">
+                      <div className="portfolio-title">
+                        <span className="por-title">
                           {" "}
                           &lt;&nbsp;{portfolio?.category}&nbsp;&gt;{" "}
                         </span>
@@ -180,9 +180,9 @@ const AllProjects = () => {
                     <Slider {...settings}>
                       {portfolio?.projects?.map((card, index) => {
                         return (
-                          <div class="carousel__slide mb-10">
+                          <div className="carousel__slide mb-10">
                             <div
-                              class="card"
+                              className="card"
                               style={{
                                 marginRight: "6rem",
                               }}
@@ -195,22 +195,22 @@ const AllProjects = () => {
                                 })
                               }
                             >
-                              <div class="card__inner">
-                                <div class="card__image">
+                              <div className="card__inner">
+                                <div className="card__image">
                                   <img
                                     src={card?.coverImage}
                                     alt="Kaiya Screenshot"
                                   />
                                 </div>
                               </div>
-                              <div class="hover__overlay">
+                              <div className="hover__overlay">
                                 <h3>{card?.title}</h3>
                                 <p>{card?.description}</p>
 
                                 <a
                                   href={card?.link}
                                   target="_blank"
-                                  class="link__icon"
+                                  className="link__icon"
                                 >
                                   <LinkIcon />
                                 </a>

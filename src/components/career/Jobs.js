@@ -41,9 +41,9 @@ const Jobs = ({ title, type, seats }) => {
   return (
     <div>
       <div className="career-Filters">
-        <div class="job-heading">
-          <div class="jobs-title">
-            <span class="job-title"> &lt;&nbsp;Job Filter&nbsp;&gt; </span>
+        <div className="job-heading">
+          <div className="jobs-title">
+            <span className="job-title"> &lt;&nbsp;Job Filter&nbsp;&gt; </span>
             <h2 className="text-3xl font-bold">
               Find your desired jobs & get recruited!
             </h2>

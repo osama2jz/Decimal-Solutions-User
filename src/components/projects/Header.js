@@ -10,8 +10,8 @@ function Header() {
   return (
     <>
       <header>
-        <div class="contact-details">
-          <div class="phone">
+        <div className="contact-details">
+          <div className="phone">
             <span>
               <PhoneIcon />
               +92 345 5893337, &nbsp;+92 300 4257414
@@ -24,8 +24,8 @@ function Header() {
             </span>
           </div>
 
-          <div class="socials">
-            <div class="social-media-platforms">
+          <div className="socials">
+            <div className="social-media-platforms">
               <a href="#">
                 <FacebookIcon className="img" />
               </a>
@@ -42,63 +42,63 @@ function Header() {
 
         {/* Navbar started */}
         <nav>
-          <div class="logo">
+          <div className="logo">
             <a href="index.html">
               <img src={Logo} className="img" />
             </a>
           </div>
-          <div class="nav-links">
-            <ul class="menu">
-              <li class="item current">
+          <div className="nav-links">
+            <ul className="menu">
+              <li className="item current">
                 <a href="#">Home</a>
               </li>
-              <li class="item">
+              <li className="item">
                 <a href="#">Services</a>
               </li>
-              <li class="item">
+              <li className="item">
                 <a href="#">Portfolio</a>
               </li>
-              <li class="item">
+              <li className="item">
                 <a href="#">Our Products</a>
               </li>
-              <li class="item">
+              <li className="item">
                 <a href="#">Careers</a>
               </li>
-              <li class="item">
+              <li className="item">
                 <a href="#">About Us</a>
               </li>
-              <li class="item">
+              <li className="item">
                 <a href="#">Blog</a>
               </li>
-              <li class="item toggle">
+              <li className="item toggle">
                 <a href="#">
-                  <i class="fas fa-bars"></i>
+                  <i className="fas fa-bars"></i>
                 </a>
               </li>
             </ul>
           </div>
         </nav>
-        <div class="mobile-nav">
-          <ul class="menu">
-            <li class="current">
+        <div className="mobile-nav">
+          <ul className="menu">
+            <li className="current">
               <a href="#">Home</a>
             </li>
-            <li class="">
+            <li className="">
               <a href="#">Services</a>
             </li>
-            <li class="">
+            <li className="">
               <a href="#">Portfolio</a>
             </li>
-            <li class="">
+            <li className="">
               <a href="#">Our Products</a>
             </li>
-            <li class="">
+            <li className="">
               <a href="#">Careers</a>
             </li>
-            <li class="">
+            <li className="">
               <a href="#">About Us</a>
             </li>
-            <li class="">
+            <li className="">
               <a href="#">Blog</a>
             </li>
           </ul>

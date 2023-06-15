@@ -17,17 +17,17 @@ function Achievement() {
     >
       <Wrapper>
         {/* <!-- Achievements section started--> */}
-        <div class="achievements">
-          <div class="overlay"></div>
-          <div class="content">
-            <div class="heading">
-              <div class="achievements-title">
-                <span class="title"> &lt;&nbsp;Some Facts&nbsp;&gt; </span>
+        <div className="achievements">
+          <div className="overlay"></div>
+          <div className="content">
+            <div className="heading">
+              <div className="achievements-title">
+                <span className="title"> &lt;&nbsp;Some Facts&nbsp;&gt; </span>
                 <h2 className="font-bold">Number of Achievements</h2>
               </div>
             </div>
-            <div class="achievements-boxes">
-              <div class="yearsOps center-achi">
+            <div className="achievements-boxes">
+              <div className="yearsOps center-achi">
                 <div>
                   <GroupIcon />
                 </div>
@@ -41,7 +41,7 @@ function Achievement() {
                 )}
                 <span>Years of operation</span>
               </div>
-              <div class="c-projects center-achi">
+              <div className="c-projects center-achi">
                 <div>
                   <PatternIcon />
                 </div>
@@ -57,7 +57,7 @@ function Achievement() {
                 </h1>
                 <span>Completed Projects</span>
               </div>
-              <div class="clients center-achi">
+              <div className="clients center-achi">
                 <div>
                   <PeopleIcon />
                 </div>
@@ -71,7 +71,7 @@ function Achievement() {
                 )}
                 <span>Loyal Clients</span>
               </div>
-              <div class="projects center-achi">
+              <div className="projects center-achi">
                 <div>
                   <LaptopIcon />
                 </div>

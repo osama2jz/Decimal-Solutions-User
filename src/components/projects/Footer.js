@@ -7,10 +7,10 @@ function Footer() {
   return (
     <>
       <footer>
-        <div class="overlay"></div>
-        <div class="content">
-          <div class="footer-div">
-            <div class="footer-div-1">
+        <div className="overlay"></div>
+        <div className="content">
+          <div className="footer-div">
+            <div className="footer-div-1">
               <ul>
                 <li>
                   <a href="#">Home</a>
@@ -35,7 +35,7 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div class="footer-div-2">
+            <div className="footer-div-2">
               <h2>Contact Us</h2>
               <span>info@decimalsolutions.com</span>
               <span>+92 345 5893337, +92 300 4257414</span>
@@ -44,8 +44,8 @@ function Footer() {
                 44000
               </span>
             </div>
-            <div class="footer-div-3">
-              <div class="socials-footer">
+            <div className="footer-div-3">
+              <div className="socials-footer">
                 <a href="#">
                   <FacebookIcon />
                 </a>
@@ -57,9 +57,9 @@ function Footer() {
                 </a>
               </div>
               <hr />
-              <div class="last-line">
+              <div className="last-line">
                 <span>
-                  Copyright &copy; <span class="bold">decimal Solution</span>{" "}
+                  Copyright &copy; <span className="bold">decimal Solution</span>{" "}
                   All rights reserved 2022
                 </span>
               </div>

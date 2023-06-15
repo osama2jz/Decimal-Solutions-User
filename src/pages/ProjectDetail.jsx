@@ -82,7 +82,7 @@ const ProductDetail = () => {
           <div>
             <button
               onClick={() => window.open(projectData?.link, "_blank")}
-              class="bg-white border border-borderColor border-opacity-50 rounded-sm px-4 py-2 flex items-center project-Detail-button"
+              className="bg-white border border-borderColor border-opacity-50 rounded-sm px-4 py-2 flex items-center project-Detail-button"
             >
               <img
                 src={ExternalLink}

@@ -8,9 +8,9 @@ import Group4 from "../../assets/images/Group4.svg";
 const HiringProcess = () => {
   return (
     <div className="hiring-process-container">
-      <div class="hiring-heading">
-        <div class="hiring-title">
-          <span class="hir-title"> &lt;&nbsp;Hiring Steps&nbsp;&gt; </span>
+      <div className="hiring-heading">
+        <div className="hiring-title">
+          <span className="hir-title"> &lt;&nbsp;Hiring Steps&nbsp;&gt; </span>
           <h2 className="text-3xl font-bold">Our Recruitment Process</h2>
         </div>
       </div>

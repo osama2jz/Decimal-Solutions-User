@@ -31,7 +31,7 @@ function Technology() {
         ) : (
           <Slider {...settings} className="slider">
             {test.map((obj) => (
-              <div class="slider__contents">
+              <div className="slider__contents">
                 <div
                   style={{
                     display: "flex",
@@ -41,25 +41,25 @@ function Technology() {
                     marginBottom: "3rem",
                   }}
                 >
-                  <div class="heading">
-                    <div class="testimonials-desc">
-                      <span class="title">
+                  <div className="heading">
+                    <div className="testimonials-desc">
+                      <span className="title">
                         {" "}
                         &lt;&nbsp;Testimonials&nbsp;&gt;{" "}
                       </span>
                       <h3>Client Testimonial</h3>
                     </div>
                   </div>
-                  {/* <h2 class="slider__caption">Muhammad Ali</h2> */}
+                  {/* <h2 className="slider__caption">Muhammad Ali</h2> */}
 
-                  <div class="image__container">
+                  <div className="image__container">
                     <QuotesIcon className="quotes__icon" />
-                    <img class="slider__image" src={obj?.image} alt="Client" />
+                    <img className="slider__image" src={obj?.image} alt="Client" />
                   </div>
                   <div>
-                    <h2 class="slider__caption">{obj?.name}</h2>
-                    <p class="role">{obj?.designation}</p>
-                    <p class="slider__txt">{obj?.testimonial}</p>
+                    <h2 className="slider__caption">{obj?.name}</h2>
+                    <p className="role">{obj?.designation}</p>
+                    <p className="slider__txt">{obj?.testimonial}</p>
                   </div>
                 </div>
               </div>
