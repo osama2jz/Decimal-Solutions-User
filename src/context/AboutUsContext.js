@@ -5,7 +5,7 @@ import { backendUrl } from "../constants";
 export const AboutUsContext = createContext({});
 const AboutUsProvider = (props) => {
   const [aboutUs, setAboutUs] = useState(
-    JSON.parse(localStorage.getItem("aboutUs"))?.userType
+    JSON.parse(localStorage.getItem("aboutUs"))
   );
 
   const getMyData = () => {

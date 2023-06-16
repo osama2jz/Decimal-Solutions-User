@@ -11,22 +11,17 @@ import { BiMenu } from "react-icons/bi";
 import axios from "axios";
 import { backendUrl } from "../../constants";
 import { Loader } from "@mantine/core";
+import { useContext } from "react";
+import { AboutUsContext } from "../../context/AboutUsContext";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(false);
+  const {aboutUs:data} = useContext(AboutUsContext)
   const navigation = useNavigate();
   const toggleClicked = () => {
     setShowMenu(!showMenu);
   };
-  useEffect(() => {
-    setLoading(true);
-    axios.get(backendUrl + "/api/v1/web/contactUs").then((res) => {
-      setData(res.data?.data[0]);
-      setLoading(false);
-    });
-  }, []);
   return (
     <>
       <header>
@@ -41,7 +36,7 @@ function Header() {
               </span>
               <span>
                 <EmailIcon style={{ marginRight: "0.4rem" }} />
-                <a href={`mailto:${data?.primaryEmail}`}>{data.primaryEmail}</a>
+                <a href={`mailto:${data?.primaryEmail}`}>{data?.primaryEmail}</a>
               </span>
             </div>
 

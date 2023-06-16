@@ -1,5 +1,6 @@
 import { Icon24Hours } from "@tabler/icons-react";
 import {
+  Anchor,
   Button,
   Divider,
   Group,
@@ -32,7 +33,7 @@ const ContactUsHoverButton = () => {
       }}
     >
       <Popover
-        width={320}
+        width={310}
         position="top-end"
         withArrow
         shadow="md"
@@ -55,10 +56,17 @@ const ContactUsHoverButton = () => {
           <Stack spacing="xs" style={{ alignItems: "center" }}>
             <Paper bg="rgb(148, 31, 126)" p="xs">
               <Stack spacing={0} pb={"xs"}>
-                <Text color="white">Hello</Text>
+                <Text color="white">Hello!</Text>
                 <Text color="white">
-                  Feel Free To Contact Us or email us at
-                  support@decimalsolution.com
+                  Feel Free To Contact Us or email us at{" "}
+                  <Anchor
+                    href={`mailto:${
+                      aboutUs?.primaryEmail || "info@decimalsolution.com"
+                    }`}
+                    style={{ color: "white" }}
+                  >
+                    {aboutUs?.primaryEmail || "info@decimalsolution.com"}
+                  </Anchor>
                 </Text>
               </Stack>
             </Paper>

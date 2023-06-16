@@ -155,7 +155,6 @@ function Services() {
                   <div className="hover__overlay">
                     <h3>{obj?.title}</h3>
                     <p>{obj?.shortDescription}</p>
-
                     <a href="/view-projects" className="link__icon">
                       <LinkIcon />
                     </a>

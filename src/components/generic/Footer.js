@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook-white.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram-white.svg";
 import { ReactComponent as LinkedInIcon } from "../../assets/icons/linkedin-white.svg";
@@ -6,17 +6,12 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { backendUrl } from "../../constants";
 import { Loader } from "@mantine/core";
+import { AboutUsContext } from "../../context/AboutUsContext";
 
 function Footer() {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    setLoading(true);
-    axios.get(backendUrl + "/api/v1/web/contactUs").then((res) => {
-      setData(res.data.data[0]);
-      setLoading(false);
-    });
-  }, []);
+  const {aboutUs:data} = useContext(AboutUsContext)
+
   return (
     <>
       <footer>

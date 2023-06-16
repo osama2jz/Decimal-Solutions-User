@@ -17,143 +17,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import moment from "moment/moment";
 
 const SpecificBlog = () => {
-  const blogsArray = [
-    {
-      id: 1,
-      title: "Lorem 1",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 2",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 3",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-
-    {
-      id: 2,
-      title: "Lorem 4",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 5",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 6",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 7",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 8",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 9",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 10",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-
-    {
-      id: 2,
-      title: "Lorem 14",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 135",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 16",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 16",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 17",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-    {
-      id: 2,
-      title: "Lorem 18",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin",
-      date: "23 December 2021",
-      image: blogImage,
-    },
-  ];
   const navigate=useNavigate()
 
   const {data}=useLocation().state
   console.log("State",data)
-  const [blogs, setBlogs] = React.useState(blogsArray);
+  const [blogs, setBlogs] = React.useState();
   const backgroundImage = {
     backgroundImage: `url("${pic}")`,
     backgroundSize: "cover",
@@ -191,26 +59,6 @@ const SpecificBlog = () => {
         <p>{data?.description}</p>
 
         <div>
-          {/* <h1 className="mt-6 text-[25px] text-justify leading-loose ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy text ever since the 1500s, when
-            an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but
-            also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsum.
-          </h1> */}
           <h1 className="text-3xl mt-6 mb-4 text-justify underline-offset-8 font-semibold">{data?.blogDescription}</h1>
           <div className="xl:flex justify-center ">
             <h1 className="mt-6 text-[25px] text-justify leading-loose pr-5 ">
@@ -218,62 +66,11 @@ const SpecificBlog = () => {
             </h1>
             <img src={data?.blogImage} alt="" className="mt-6  w-[657px] xl:float-right" />
           </div>
-          {/* <h1 className="mt-6 text-[25px] text-justify lg:leading-loose ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy text ever since the 1500s, when
-            an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but
-            also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsum.
-          </h1> */}
-        </div>
-        {/* <div className="grid grid-cols-6 gap-4 mb-10 p-10 items-center rounded-xl bg-[#F4F3F3] mt-16 ">
-          <div className="rounded-full xs:col-span-6 2xl:col-span-1 ">
-            <img src={pic} alt="" className="rounded-full w-56 h-56" />
-          </div>
-          <div className="xs:col-span-6 2xl:col-span-5  ">
-            <h1 className="text-[33px]">Michkel John</h1>
-            <h1 className="text-[25px] cardBreak3:leading-loose text-justify">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make
-              survived not only five centuries, but also the leap into
-              electronic typesetting.
-            </h1>
-          </div>
-        </div> */}
-      </div>
-      {/* <div className="  grid sm:grid-cols-1 cardBreak2:grid-cols-2 cardBreak3:grid-cols-3  justify-around px-28 pt-12">
-        {blogs.map((blog, index) => {
-          if (index < 3) {
-            return (
-              <Card
-                key={index}
-                image={blog.image}
-                title={blog.title}
-                date={blog.date}
-                description={blog.description}
-              />
-            );
-          }
-        })}
-
+         </div>
         
-      </div> */}
+      </div>
       <div className=" px-32 flex items-center cursor-pointer" onClick={()=>navigate(-1)}>
-       
+     
         <ChevronLeft size={36} color="#A4238C" />
 
         <h1 className="text-[#A4238C] text-[32px] p-10">GO BACK</h1>

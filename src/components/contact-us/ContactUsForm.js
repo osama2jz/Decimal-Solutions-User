@@ -1,17 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { backendUrl } from "../../constants";
+import { AboutUsContext } from "../../context/AboutUsContext";
+import { useContext } from "react";
 
 const ContactUsForm = () => {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    setLoading(true);
-    axios.get(backendUrl + "/api/v1/web/contactUs").then((res) => {
-      setData(res.data.data[0]);
-      setLoading(false);
-    });
-  }, []);
+  const {aboutUs:data} = useContext(AboutUsContext)
+
   return (
     <div>
       <div className="grid h-auto grid-cols-1  grid-rows-2 gap-4 bg-[#F4F4F4] xl:h-[1022px] xl:grid-cols-12  xl:grid-rows-1">
@@ -32,7 +28,7 @@ const ContactUsForm = () => {
               </span>
               <div>
                 <span className="font-poppins text-[12px] font-normal sm:text-[16px] md:text-[22px]">
-                  {data.primaryContact}
+                  {data?.primaryContact}
                 </span>
               </div>
             </div>
