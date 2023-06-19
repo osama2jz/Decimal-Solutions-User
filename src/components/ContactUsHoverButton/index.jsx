@@ -1,19 +1,15 @@
-import { Icon24Hours } from "@tabler/icons-react";
 import {
   Anchor,
   Button,
-  Divider,
   Group,
   Paper,
   Popover,
   Space,
   Stack,
-  Text,
+  Text
 } from "@mantine/core";
-import { BsFacebook, BsMessenger, BsWhatsapp } from "react-icons/bs";
-import { BrandFacebook } from "tabler-icons-react";
-import { AiOutlineFacebook, AiOutlineWhatsApp } from "react-icons/ai";
 import { useContext } from "react";
+import { BsMessenger, BsWhatsapp } from "react-icons/bs";
 import { AboutUsContext } from "../../context/AboutUsContext";
 
 const ContactUsHoverButton = () => {
