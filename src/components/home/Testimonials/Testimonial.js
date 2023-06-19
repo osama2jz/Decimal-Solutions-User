@@ -9,6 +9,7 @@ import { Loader } from "@mantine/core";
 
 function Technology() {
   const [test, setTest] = useState([]);
+  const [loading, setLoading] = useState(true);
   const settings = {
     dots: true,
     infinite: true,
@@ -18,15 +19,16 @@ function Technology() {
     slidesToScroll: 1,
   };
   useEffect(() => {
-    // setIsLoading(true);
+    setLoading(true);
     axios.get(backendUrl + "/api/v1/web/testimonial").then((res) => {
       setTest(res.data.data);
+      setLoading(false);
     });
   }, []);
   return (
     <Wrapper>
       <div style={{ marginTop: "5rem", marginBottom: "5rem" }}>
-        {!test.length ? (
+        {loading? (
           <Loader m="auto" color="purple" />
         ) : (
           <Slider {...settings} className="slider">
