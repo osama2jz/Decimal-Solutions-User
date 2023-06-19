@@ -7,9 +7,10 @@ import Wrapper from "./SliderImagesWrapper";
 
 function SliderImages() {
   const [isLoading, setIsLoading] = useState(false);
-  const [images, setImages] = useState([Banner1]);
+  const [images, setImages] = useState([Banner1, Banner1]);
   const settings = {
     dots: true,
+
     infinite: true,
     speed: 1000,
     autoplaySpeed: 3000,
@@ -17,17 +18,17 @@ function SliderImages() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  useEffect(() => {
-    setIsLoading(true);
-    axios.get(backendUrl + `/api/v1/web/sliderImages`).then((res) => {
-      setImages(res.data.data[0].images);
-      setIsLoading(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   axios.get(backendUrl + `/api/v1/web/sliderImages`).then((res) => {
+  //     setImages(res.data.data[0].images);
+  //     setIsLoading(false);
+  //   });
+  // }, []);
   return (
     <Wrapper>
       <div>
-        <Slider {...settings}>
+        <Slider {...settings} arrows={false}>
           {/* <div className="img-slider-header">
             <div className="slide active">
               <img src={Banner1} alt="People working in an office" />
@@ -46,9 +47,13 @@ function SliderImages() {
             </div>
           </div> */}
           {images?.map((obj, index) => (
-            <div className="img-slider-headerr" key={index}>
-              <div className="slide active">
-                <img src={obj} alt="People working in an office" />
+            <div className="img-slider-headerr overflow-hidden" key={index}>
+              <div className="slide active overflow-hidden">
+                <img
+                  src={obj}
+                  alt="People working in an office"
+                  width={"100%"}
+                />
               </div>
             </div>
           ))}

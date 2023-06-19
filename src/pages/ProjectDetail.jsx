@@ -55,7 +55,7 @@ const ProductDetail = () => {
                     <text className="text-gray-500 text-lg">
                       {moment(
                         projectData?.completedAt || projectData?.createdAt
-                      ).format("dd MMMM YYYY")}
+                      ).format("DD MMMM YYYY")}
                     </text>
                   </div>
                   <div>
