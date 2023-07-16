@@ -76,16 +76,10 @@ export const Applyjob = () => {
         <div className="portfolio-heading">
           <div className="portfolio-title">
             <span className="por-title">
-              {" "}
               &lt;&nbsp;USQUARE SOLUTIONS&nbsp;&gt;{" "}
             </span>
-            <h2 className="font-bold text-3xl">{jobData?.title}</h2>
           </div>
         </div>
-        <h1 className="text-2xl font-bold text-gray">Apply Online</h1>
-        <br />
-        <p>Please fill the form to apply.</p>
-        <br />
         {submitted ? (
           <Flex justify={"center"} align={"center"} gap={"md"}>
             <Check color="purple" size={"50px"} />
@@ -97,65 +91,72 @@ export const Applyjob = () => {
             <Title>Submitting Application</Title>
           </Flex>
         ) : (
-          <form onSubmit={form.onSubmit((values) => applyforJob(values))}>
-            <SimpleGrid cols={2} spacing="xl" verticalSpacing="lg">
-              <TextInput
-                placeholder="Full Name"
-                size="lg"
-                {...form.getInputProps("fullName")}
+          <>
+            <h2 className="font-bold text-3xl flex item-center justify-center">{jobData?.title}</h2>
+            <h1 className="text-2xl font-bold text-gray">Apply Online</h1>
+            <br />
+            <p>Please fill the form to apply.</p>
+            <br />
+            <form onSubmit={form.onSubmit((values) => applyforJob(values))}>
+              <SimpleGrid cols={2} spacing="xl" verticalSpacing="lg">
+                <TextInput
+                  placeholder="Full Name"
+                  size="lg"
+                  {...form.getInputProps("fullName")}
+                />
+                <TextInput
+                  placeholder="Email"
+                  size="lg"
+                  {...form.getInputProps("email")}
+                />
+                <Select
+                  placeholder="Gender"
+                  data={[
+                    { value: "Male", label: "Male" },
+                    { value: "Female", label: "Female" },
+                  ]}
+                  size="lg"
+                  {...form.getInputProps("gender")}
+                />
+                <TextInput
+                  placeholder="City"
+                  size="lg"
+                  {...form.getInputProps("address")}
+                />
+                <TextInput
+                  placeholder="Contact Number"
+                  size="lg"
+                  type="number"
+                  {...form.getInputProps("contactNumber")}
+                />
+                <TextInput
+                  placeholder="Whatsapp Number"
+                  size="lg"
+                  type="number"
+                  {...form.getInputProps("whatsappNumber")}
+                />
+                <Select
+                  placeholder="Experience (in Years)"
+                  data={["0-1", "1-3", "3-5", "5-8", "8-10", "10-15", "15+"]}
+                  size="lg"
+                  {...form.getInputProps("yearsOfExperience")}
+                />
+              </SimpleGrid>
+              <DropZone
+                form={form}
+                folderName={"jobApplications"}
+                name={"resume"}
+                label="Resume"
               />
-              <TextInput
-                placeholder="Email"
-                size="lg"
-                {...form.getInputProps("email")}
-              />
-              <Select
-                placeholder="Gender"
-                data={[
-                  { value: "Male", label: "Male" },
-                  { value: "Female", label: "Female" },
-                ]}
-                size="lg"
-                {...form.getInputProps("gender")}
-              />
-              <TextInput
-                placeholder="City"
-                size="lg"
-                {...form.getInputProps("address")}
-              />
-              <TextInput
-                placeholder="Contact Number"
-                size="lg"
-                type="number"
-                {...form.getInputProps("contactNumber")}
-              />
-              <TextInput
-                placeholder="Whatsapp Number"
-                size="lg"
-                type="number"
-                {...form.getInputProps("whatsappNumber")}
-              />
-              <Select
-                placeholder="Experience (in Years)"
-                data={["0-1", "1-3", "3-5", "5-8", "8-10", "10-15", "15+"]}
-                size="lg"
-                {...form.getInputProps("yearsOfExperience")}
-              />
-            </SimpleGrid>
-            <DropZone
-              form={form}
-              folderName={"jobApplications"}
-              name={"resume"}
-              label="Resume"
-            />
 
-            <button
-              type="submit"
-              className="flex float-right bg-accentColor text-white font-bold text-lg px-10 py-2 rounded-full mt-10 ml-auto mb-20"
-            >
-              Submit
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="flex float-right bg-accentColor text-white font-bold text-lg px-10 py-2 rounded-full mt-10 ml-auto mb-20"
+              >
+                Submit
+              </button>
+            </form>
+          </>
         )}
         {submitted && (
           <button
