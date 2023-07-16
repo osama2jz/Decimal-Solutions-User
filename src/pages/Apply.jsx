@@ -4,7 +4,7 @@ import {
   Select,
   SimpleGrid,
   TextInput,
-  Title
+  Title,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import axios from "axios";
@@ -32,13 +32,14 @@ export const Applyjob = () => {
       address: "",
       applicantComments: "",
     },
+    validateInputOnBlur: true,
     validate: {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
       fullName: (value) => (value.length < 2 ? "Enter full name" : null),
       contactNumber: (value) =>
-        value.length < 1 ? "Enter enter contact number" : null,
+        !/^\+?[0-9]{10,14}$/.test(value) ? "Enter valid contact number" : null,
       whatsappNumber: (value) =>
-        value.length < 1 ? "Enter whatsapp number" : null,
+        !/^\+?[0-9]{10,14}$/.test(value) ? "Enter whatsapp number" : null,
       yearsOfExperience: (value) =>
         value.length < 1 ? "Select experience" : null,
       gender: (value) => (value.length < 1 ? "Select gender" : null),

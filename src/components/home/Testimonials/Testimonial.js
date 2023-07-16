@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { ReactComponent as QuotesIcon } from "../../../assets/icons/quotes-left.svg";
-import testomoniesStock from "../../../assets/images/testomonies-stock.jpg";
 import Wrapper from "./TestimonialWrapper";
 import axios from "axios";
 import { backendUrl } from "../../../constants";
