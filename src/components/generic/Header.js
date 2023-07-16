@@ -17,7 +17,7 @@ import { AboutUsContext } from "../../context/AboutUsContext";
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [loading, setLoading] = useState(false);
-  const {aboutUs:data} = useContext(AboutUsContext)
+  const { aboutUs: data } = useContext(AboutUsContext);
   const navigation = useNavigate();
   const toggleClicked = () => {
     setShowMenu(!showMenu);
@@ -36,7 +36,9 @@ function Header() {
               </span>
               <span>
                 <EmailIcon style={{ marginRight: "0.4rem" }} />
-                <a href={`mailto:${data?.primaryEmail}`}>{data?.primaryEmail}</a>
+                <a href={`mailto:${data?.primaryEmail}`}>
+                  {data?.primaryEmail}
+                </a>
               </span>
             </div>
 
@@ -105,8 +107,13 @@ function Header() {
         </nav>
         {showMenu ? (
           <div className="mobile-nav">
-            <ul className="menu">
-              <li className="item current">
+            <ul
+              className="menu"
+              onClick={() => {
+                setShowMenu(false);
+              }}
+            >
+              <li className="item">
                 <Link to="/">Home</Link>
               </li>
               <li className="item">
