@@ -1960,7 +1960,7 @@ main .achievements {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 3rem 0;
+  /* padding: 3rem 0; */
 }
 main .achievements .overlay {
   width: 100%;
@@ -2040,7 +2040,7 @@ main .achievements .content .achievements-boxes {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  /* margin-top: 30px; */
 }
 main .achievements .content .achievements-boxes .center-achi {
   display: flex;
@@ -2059,10 +2059,6 @@ main .achievements .content .achievements-boxes .center-achi {
   main .achievements .content .achievements-boxes .center-achi {
     flex-basis: 45%;
   }
-  main .achievements .content .achievements-boxes .center-achi:nth-child(3),
-  main .achievements .content .achievements-boxes .center-achi:nth-child(4) {
-    margin-top: 1rem;
-  }
 }
 @media screen and (max-width: 532px) {
   main .achievements .content .achievements-boxes .center-achi {
@@ -2072,13 +2068,6 @@ main .achievements .content .achievements-boxes .center-achi {
 @media screen and (max-width: 400px) {
   main .achievements .content .achievements-boxes .center-achi {
     flex-basis: 90%;
-  }
-  main
-    .achievements
-    .content
-    .achievements-boxes
-    .center-achi:not(:first-child) {
-    margin-top: 1rem;
   }
 }
 main .achievements .content .achievements-boxes .center-achi .img {
@@ -2264,34 +2253,12 @@ main .projects-container .heading .project-titles {
   display: flex;
   flex-direction: column;
 }
-main .projects-container .heading .project-titles .title {
-  color: #a4238c;
-  font-size: 1.6rem;
-}
+
 .team-titles .title {
   color: #a4238c !important;
   font-size: 1.6rem;
 }
-@media all and (max-width: 1360px) {
-  main .projects-container .heading .project-titles .title {
-    font-size: 1.4rem;
-  }
-}
-@media all and (max-width: 800px) {
-  main .projects-container .heading .project-titles .title {
-    font-size: 1.2rem;
-  }
-}
-@media all and (max-width: 600px) {
-  main .projects-container .heading .project-titles .title {
-    font-size: 1rem;
-  }
-}
-@media all and (max-width: 420px) {
-  main .projects-container .heading .project-titles .title {
-    font-size: 0.8rem;
-  }
-}
+
 main .projects-container .heading .project-titles h2 {
   color: #3f3f3f;
   font-weight: 600;
@@ -2427,28 +2394,22 @@ main .projects-container .project-view-button a {
     font-size: 0.9rem;
   }
 }
-main .working-process {
-  margin-top: 9rem;
-}
+
 main .working-process .heading {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 5%;
 }
-main .working-process .heading .working-desc {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+
 main .working-process .heading .working-desc .title {
   color: #a4238c;
   font-size: 1.6rem;
   width: 100%;
 }
+font-size: 1.4rem;
 @media all and (max-width: 1360px) {
   main .working-process .heading .working-desc .title {
-    font-size: 1.4rem;
   }
 }
 @media all and (max-width: 800px) {
@@ -2549,13 +2510,14 @@ main .working-process .working-person .img-container .img {
 }
 main .working-process .working-person .description-container {
   background-color: white;
-  position: absolute;
-  padding: 30px;
+  position: relative;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: 15px 12px 20px rgba(0, 0, 0, 0.06);
   width: 40%;
   font-size: 1em;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 @media screen and (max-width: 1360px) {
   main .working-process .working-person .description-container {
@@ -2576,7 +2538,7 @@ main .working-process .working-person .description-container {
 }
 @media screen and (max-width: 1000px) {
   main .working-process .working-person .description-container {
-    position: static;
+    position: relative;
     list-style: none;
     display: list-item;
     list-style-type: decimal-leading-zero;
@@ -2584,7 +2546,7 @@ main .working-process .working-person .description-container {
     width: 100%;
     box-shadow: none;
     border: none;
-    margin-bottom: 1rem;
+    /* margin-bottom: 30px; */
   }
   main .working-process .working-person .description-container::marker {
     font-size: 1.3rem;
@@ -2606,6 +2568,12 @@ main .working-process .working-person .description-container {
   main .working-process .working-person .description-container::marker {
     font-size: 1rem;
   }
+}
+
+main .working-process .working-person .description-container h2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 main .working-process .working-person .description-container h3,
 main .working-process .working-person .description-container p {
@@ -2710,33 +2678,35 @@ main .working-process .working-person .description-container p {
     font-size: 0.9rem;
   }
 }
-main .working-process .working-person .description-1 {
-  top: 11.8%;
+ .description-container .description-1 {
+  margin-bottom: 30px;
   right: 5%;
+  left:5%
 }
 @media screen and (max-width: 1020px) {
-  main .working-process .working-person .description-1 {
-    top: 10%;
+  main .working-process .working-person .description-container.description-1 {
+    top: 30%;
     right: 4.5%;
+    left:4.5%
   }
 }
 main .working-process .working-person .description-2 {
-  top: 32.2%;
+  /* top: 7%; */
   right: 0.9%;
 }
 @media screen and (max-width: 1020px) {
   main .working-process .working-person .description-2 {
-    top: 31.5%;
+    /* top: 7%; */
     right: 0.9%;
   }
 }
 main .working-process .working-person .description-3 {
-  top: 53%;
+  top: 7.8%;
   right: 0.7%;
 }
 @media screen and (max-width: 1020px) {
   main .working-process .working-person .description-3 {
-    top: 52%;
+    top: 7.8%;
     right: 0.9%;
   }
 }
@@ -2750,16 +2720,23 @@ main .working-process .working-person .description-4 {
     right: 5.5%;
   }
 }
+main .our-tools{
+  /* text-align: center; */
+  /* margin-top: 5rem; */
+  /* margin-inline: 10px; */
+ 
+}
 main .our-tools .heading {
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 3rem;
-  margin-right: 5%;
+  /* margin-right: 5%; */
+  text-align: center;
 }
 @media screen and (max-width: 1000px) {
   main .our-tools .heading {
-    justify-content: flex-start;
+    justify-content: center;
     margin-right: 0;
   }
 }
@@ -3650,12 +3627,12 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
   padding: 70px;
   margin-bottom: 50px;
 }
-.job-description{
+.job-description {
   display: flex;
   justify-content: space-between;
 }
 
-.list{
+.list {
   list-style-type: circle;
   padding: 10px;
 }
@@ -3673,5 +3650,22 @@ footer .content .footer-div .footer-div-3 .last-line .bold {
   font-weight: 500;
   margin-top: -10px;
 }
-
-
+@media screen and (max-width: 500px) {
+  .ApplyOnline {
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+.portfolio-title .jobTitle{
+text-align: center;
+font-weight: 600;
+font-size: 24px;
+}
+@media screen and (max-width: 500px) {
+  .jobTitle {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+  }
+}

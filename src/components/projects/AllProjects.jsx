@@ -130,7 +130,7 @@ const AllProjects = () => {
         >
           <div className="absolute h-full w-full bg-black opacity-50"></div>
           <h1 className=" xs:text-1xl absolute flex h-full w-full items-center justify-center font-bold  sm:text-2xl md:text-3xl lg:text-5xl">
-            OUR PROJECTS
+            OUR PROJECTS 
           </h1>
         </div>
         <div className="projects-container">

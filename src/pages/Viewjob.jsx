@@ -2,6 +2,7 @@ import React from "react";
 import HiringProcess from "../components/career/HiringProcess";
 import { useLocation, useNavigate } from "react-router-dom";
 import moment from "moment/moment";
+import { Grid } from "@mantine/core";
 
 export const Viewjob = () => {
   const navigate = useNavigate();
@@ -24,15 +25,17 @@ export const Viewjob = () => {
       <div className="view-Jobs-content">
         <div className="portfolio-heading">
           <div className="portfolio-title">
-            <span className="por-title">
+            <span  style={{textAlign: 'center' }}className="por-title">
               {" "}
               &lt;&nbsp;USQUARE SOLUTIONS&nbsp;&gt;{" "}
             </span>
-            <h2 className="font-bold text-3xl">{jobData?.title}</h2>
+            <br/>
+            <h2 className="jobTitle ">{jobData?.title}</h2>
           </div>
         </div>
-        <div className="job-description">
-          <div>
+        <br/>
+        <Grid  style={{ marginTop: '20px'}} className="job-description">
+          <Grid.Col md={10} sm={10}>
             <div>
               <text className="font-bold text-lg">Minimum Qualification</text>
               {" : "}
@@ -43,9 +46,7 @@ export const Viewjob = () => {
             <div>
               <text className="font-bold text-lg">Experience Level</text>
               {" : "}
-              <text className="text-gray-500 text-lg">
-                {jobData?.jobLevel}
-              </text>
+              <text className="text-gray-500 text-lg">{jobData?.jobLevel}</text>
             </div>
             <div>
               <text className="font-bold text-lg">Minimum Experience</text>
@@ -78,14 +79,20 @@ export const Viewjob = () => {
                 {jobData?.minimumJobSalary} : {jobData?.maximumJobSalary}
               </text>
             </div>
-          </div>
-          <button
-            className="bg-accentColor rounded-full h-[50px] text-white font-poppins font-semibold px-[52px] py-[10px] hover:opacity-90"
-            onClick={() => navigate("/apply-job/hello", { state: { jobData } })}
-          >
-            Apply Now
-          </button>
-        </div>
+          </Grid.Col>
+          <br />
+          {/* <SimpleGrid> */}
+          <Grid.Col span={2} sm={2}>
+            <button
+              className="bg-accentColor text-center mr-0 rounded-full h-[60px]  text-white font-poppins font-semibold px-[52px] py-[10px] hover:opacity-90"
+              onClick={() =>
+                navigate("/apply-job/hello", { state: { jobData } })
+              }
+            >
+              Apply Now abc
+            </button>
+          </Grid.Col>
+        </Grid>
         <h1 className="font-bold text-2xl mt-10">Job Description</h1>
         <p className="mt-2">{jobData?.description}</p>
         <br />

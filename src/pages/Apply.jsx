@@ -75,7 +75,7 @@ export const Applyjob = () => {
       <div className="view-Jobs-content">
         <div className="portfolio-heading">
           <div className="portfolio-title">
-            <span className="por-title">
+            <span className="por-title" style={{textAlign:"center"}}>
               &lt;&nbsp;USQUARE SOLUTIONS&nbsp;&gt;{" "}
             </span>
           </div>
@@ -92,13 +92,25 @@ export const Applyjob = () => {
           </Flex>
         ) : (
           <>
-            <h2 className="font-bold text-3xl flex item-center justify-center">{jobData?.title}</h2>
-            <h1 className="text-2xl font-bold text-gray">Apply Online</h1>
-            <br />
+            <h2 className="font-bold text-3xl flex item-center justify-center">
+              {jobData?.title}
+            </h2>
+            <br/>
+            <div className="ApplyOnline">
+            <h1 style={{fontWeight:"600", fontSize:"25px"}}>Apply Online</h1>
+            {/* <br /> */}
             <p>Please fill the form to apply.</p>
+            </div>
             <br />
             <form onSubmit={form.onSubmit((values) => applyforJob(values))}>
-              <SimpleGrid cols={2} spacing="xl" verticalSpacing="lg">
+              <SimpleGrid
+                 cols={2}
+                //  spacing="lg"
+                 breakpoints={[
+                   { maxWidth: 'sm', cols: 2, spacing: 'sm' },
+                   { maxWidth: 'xs', cols: 1, spacing: 'sm' },
+                 ]}
+              >
                 <TextInput
                   placeholder="Full Name"
                   size="lg"

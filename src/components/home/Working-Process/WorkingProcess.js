@@ -7,17 +7,29 @@ function WorkingProcess() {
     <Wrapper>
       {/* <!-- Working process section started --> */}
       <div className="working-process">
-        <div className="heading">
-          <div className="working-desc">
-            <span className="title"> &lt;&nbsp;Why Choose Us&nbsp;&gt; </span>
-            <h2 style={{fontSize: 'x-large'}} className="font-bold">Our Working process</h2>
-            <p className="description" className="text-base mt-2">
-              We ensure that all your digital needs are met at an affordable
-              price and in promised time.
-            </p>
-          </div>
+        <div>
+          <span
+            style={{
+              color: "#a4238c",
+              textAlign: "center",
+              fontSize: "25.6px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            &lt;&nbsp;Why Choose Us&nbsp;&gt;{" "}
+          </span>
+          <h2 style={{ fontSize: "22px",fontWeight:"bold", textAlign:"center" }} >
+            Our Working process
+          </h2>
+          <p style={{textAlign:"center", fontSize:"18px", marginBottom:"20px"}}>
+            We ensure that all your digital needs are met at an affordable price
+            and in promised time.
+          </p>
         </div>
-        <div className="working-person" >
+        <div className="working-person">
           <div className="img-container">
             <img
               src={Image}

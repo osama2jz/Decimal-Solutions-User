@@ -22,8 +22,26 @@ function Achievement() {
           <div className="content">
             <div className="heading">
               <div className="achievements-title">
-                <span className="title"> &lt;&nbsp;Some Facts&nbsp;&gt; </span>
-                <h2 className="font-bold">Number of Achievements</h2>
+                <span
+                  style={{
+                    color: "white",
+                    fontSize: "25.6px",
+                    textAlign: "center",
+                  }}
+                >
+                  {" "}
+                  &lt;&nbsp;Some Facts&nbsp;&gt;{" "}
+                </span>
+                <h1
+                  style={{
+                    color: "white",
+                    textAlign: "center",
+                    fontSize: "22px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Number of Achievements
+                </h1>
               </div>
             </div>
             <div className="achievements-boxes">

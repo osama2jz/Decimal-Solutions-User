@@ -102,8 +102,17 @@ function Services() {
       <div className="projects-container">
         <div className="heading">
           <div className="project-titles">
-            <span className="title"> &lt;&nbsp;OUR PROJECTS&nbsp;&gt; </span>
-            <h2>Some Latest Client Projects</h2>
+            <span  style={{
+                    color: "#a4238c",
+                    textAlign: "center",
+                    fontSize: "25.6px"
+                  }}> &lt;&nbsp;OUR PROJECTS&nbsp;&gt; </span>
+            <h1  style={{
+                    color: "black",
+                    textAlign: "center",
+                    fontSize: "22px",
+                    fontWeight: "bold",
+                  }}>Some Latest Client Projects</h1>
           </div>
         </div>
         {/* <div className="project-tags">
@@ -131,9 +140,9 @@ function Services() {
       </div>
       <div
         style={{
-          marginTop: "5rem",
-          marginBottom: "5rem",
-          marginLeft: "5rem",
+          marginTop: "50px",
+          marginBottom: "30px",
+          marginLeft: "3rem",
           marginRight: "3rem",
         }}
       >

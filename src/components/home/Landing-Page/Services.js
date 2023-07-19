@@ -109,11 +109,24 @@ function Services() {
       >
         <div className="heading">
           <div className="services-title">
-            <span className="ser-title">
-              {" "}
-              &lt;&nbsp;Our Services&nbsp;&gt;{" "}
+            <span
+              style={{
+                textAlign: "center",
+                color: "#a4238c",
+                fontSize: "25.6px",
+              }}
+            >
+              &lt;&nbsp;Our Services &nbsp;&gt;
             </span>
-            <h2 className="font-bold text-xl">View some of our services</h2>
+            <h1
+              style={{
+                textAlign: "center",
+                fontSize: "22px",
+                fontWeight: "bold",
+              }}
+            >
+              View Some Of Our Services
+            </h1>
           </div>
         </div>
         <Slider {...settings}>

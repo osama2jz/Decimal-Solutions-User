@@ -96,18 +96,19 @@ function Technology() {
   };
   return (
     <Wrapper>
-      <div className="our-tools">
-        <div className="heading">
-          <div className="tools-desc">
-            <span className="title">&lt;&nbsp;Tools & Technologies&nbsp;&gt;</span>
+      <div className="our-tools"
+      >
+        
+          
 
-            <h2 className="font-bold">Working Technologies</h2>
-            <p className="description">
+            <h1 style={{color:"#a4238c", fontSize:"25.6px", textAlign:"center", marginTop:"20px"}}>&lt;&nbsp;Tools & Technologies&nbsp;&gt;</h1>
+            <h2 style={{color:"black", fontSize:"22px", textAlign:"center", fontWeight:"bold"}}>Working Technologies</h2>
+            <p style={{color:"black", fontSize:"18px", textAlign:"center"}}>
               We ensure that you'll embark on a perfectly planned, safe vacation
               at a price you can afford.
             </p>
-          </div>
-        </div>
+          
+        
       </div>
       <div
         style={{
