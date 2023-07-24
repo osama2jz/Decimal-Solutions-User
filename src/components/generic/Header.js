@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ReactComponent as PhoneIcon } from "../../assets/icons/phone.svg";
 import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram.svg";
+import { ReactComponent as YoutubeIcon } from "../../assets/icons/youtube.svg";
 import { ReactComponent as LinkedInIcon } from "../../assets/icons/linkedin.svg";
 import { ReactComponent as EmailIcon } from "../../assets/icons/email.svg";
 import { Link } from "react-router-dom";
@@ -31,11 +32,15 @@ function Header() {
           <div className="contact-details">
             <div className="phone">
               <span>
-                <PhoneIcon />
+                <PhoneIcon
+                  style={{ marginLeft: "0.5rem", marginRight: "1rem" }}
+                />
                 {data?.primaryContact}
               </span>
               <span>
-                <EmailIcon style={{ marginRight: "0.4rem" }} />
+                <EmailIcon
+                  style={{ marginLeft: "0.5rem", marginRight: "1rem" }}
+                />
                 <a href={`mailto:${data?.primaryEmail}`}>
                   {data?.primaryEmail}
                 </a>
@@ -49,6 +54,9 @@ function Header() {
                 </a>
                 <a href={data?.instagram} target="_blank">
                   <InstagramIcon className="img" />
+                </a>
+                <a href={data?.youtube} target="_blank">
+                  <YoutubeIcon className="img" />
                 </a>
                 <a href={data?.linkedIn} target="_blank">
                   <LinkedInIcon className="img" />
@@ -80,6 +88,9 @@ function Header() {
                 <Link to="/">Home</Link>
               </li>
               <li className="item">
+                <Link to="/about-us">About Us</Link>
+              </li>
+              <li className="item">
                 <Link to="/our-services">Services</Link>
               </li>
               <li className="item">
@@ -90,9 +101,6 @@ function Header() {
               </li>
               <li className="item">
                 <Link to="/career">Careers</Link>
-              </li>
-              <li className="item">
-                <Link to="/about-us">About Us</Link>
               </li>
               <li className="item">
                 <Link to="/blogs">Blog</Link>
@@ -117,6 +125,9 @@ function Header() {
                 <Link to="/">Home</Link>
               </li>
               <li className="item">
+                <Link to="/about-us">About Us</Link>
+              </li>
+              <li className="item">
                 <Link to="/our-services">Services</Link>
               </li>
               <li className="item">
@@ -127,9 +138,6 @@ function Header() {
               </li>
               <li className="item">
                 <Link to="/career">Careers</Link>
-              </li>
-              <li className="item">
-                <Link to="/about-us">About Us</Link>
               </li>
               <li className="item">
                 <Link to="/blogs">Blog</Link>

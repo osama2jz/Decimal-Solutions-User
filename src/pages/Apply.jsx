@@ -8,6 +8,7 @@ import {
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import axios from "axios";
+import InputMask  from "react-input-mask";
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Check } from "tabler-icons-react";
@@ -92,7 +93,7 @@ export const Applyjob = () => {
           </Flex>
         ) : (
           <>
-            <h2 className="font-bold text-3xl flex item-center justify-center">
+            <h2 className="font-bold text-center text-3xl flex item-center justify-center">
               {jobData?.title}
             </h2>
             <br/>
@@ -138,13 +139,16 @@ export const Applyjob = () => {
                 <TextInput
                   placeholder="Contact Number"
                   size="lg"
-                  type="number"
+                  // type="number"
+                  component={InputMask}
+                  mask="+ 99 9999 999999"
                   {...form.getInputProps("contactNumber")}
                 />
                 <TextInput
                   placeholder="Whatsapp Number"
                   size="lg"
-                  type="number"
+                  component={InputMask}
+                  mask="+ 99 9999 999999"
                   {...form.getInputProps("whatsappNumber")}
                 />
                 <Select

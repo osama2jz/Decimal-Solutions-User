@@ -89,7 +89,7 @@ export const Viewjob = () => {
                 navigate("/apply-job/hello", { state: { jobData } })
               }
             >
-              Apply Now abc
+              Apply Now
             </button>
           </Grid.Col>
         </Grid>

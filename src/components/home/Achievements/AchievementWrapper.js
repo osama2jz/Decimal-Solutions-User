@@ -7,7 +7,7 @@ const Wrapper = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
   }
   .overlay {
     width: 100%;
@@ -49,7 +49,7 @@ const Wrapper = styled.section`
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
   .center-achi {
     display: flex;

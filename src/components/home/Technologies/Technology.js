@@ -110,7 +110,7 @@ function Technology() {
           
         
       </div>
-      <div
+      <div  
         style={{
           marginTop: "5rem",
           marginBottom: "5rem",

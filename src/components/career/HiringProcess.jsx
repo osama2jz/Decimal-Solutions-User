@@ -35,7 +35,8 @@ const HiringProcess = () => {
           alt="Hiring Process"
           className="hiring-process-image"
         />
-        <img src={join} alt="Hiring Process" className="hiring-process-image" />
+        <img src={join} 
+        style={{height:"248px", width:"230px"}} alt="Hiring Process" className="hiring-process-image" />
       </div>
     </div>
   );
