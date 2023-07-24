@@ -14,6 +14,7 @@ const HiringProcess = () => {
           <h2 className="text-3xl font-bold">Our Recruitment Process</h2>
         </div>
       </div>
+      
       <div className="Hiring-Process-div">
         <img
           src={Group1}
